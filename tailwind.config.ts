@@ -18,6 +18,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        // This makes Times New Roman the default serif font
+        serif: ['"Times New Roman"', 'Times', 'serif'],
+      },
       colors: {
         placeholderColor: {
           light: "#e9e9e9",
