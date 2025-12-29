@@ -249,7 +249,7 @@ const HomePage = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-2 items-center gap-16">
             {/* LEFT CONTENT */}
-            <div className="max-w-xl"> 
+            <div className="max-w-xl">
               <h2 className="text-5xl font-serif font-extrabold leading-tight mb-6">
                 How to thrive in Cartagena, Colombia like a local.
               </h2>
