@@ -55,7 +55,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen font-sans">
       {/* Header */}
-      <header className="flex flex-wrap items-center justify-between px-10 py-4 bg-black md:px-16">
+      {/* <header className="flex flex-wrap items-center justify-between px-10 py-4 bg-black md:px-16">
         <div>
           <img src={logo} className="h-10 md:h-13 w-auto" alt="Logo" />
         </div>
@@ -90,7 +90,7 @@ const HomePage = () => {
             BOOK TRIP
           </Button>
         </div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <div
@@ -250,7 +250,7 @@ const HomePage = () => {
           <div className="grid grid-cols-2 items-center gap-16">
             {/* LEFT CONTENT */}
             <div className="max-w-xl">
-              <h2 className="text-5xl font-serif font-extrabold leading-tight mb-6">
+              <h2 className="text-5xl font-serif font-extrabold leading-tight mb-6 text-black">
                 How to thrive in Cartagena, Colombia like a local.
               </h2>
 
@@ -260,12 +260,11 @@ const HomePage = () => {
                 Gringos.
               </p>
 
-              <a
-                href="https://lacarta.co/cartagena/resources/"
-                className="inline-block bg-[#20bb59] text-white px-6 py-3 rounded-lg font-semibold text-sm"
-              >
-                DOWNLOAD TRAVEL GUIDE
-              </a>
+              <Button className="inline-block bg-[#20bb59] text-white px-6 py-3 rounded-md font-semibold text-sm">
+                <a href="https://lacarta.co/cartagena/resources/">
+                  https://lacarta.co/cartagena/resources/
+                </a>
+              </Button>
             </div>
 
             {/* RIGHT IMAGE STACK */}
@@ -273,7 +272,7 @@ const HomePage = () => {
               <img
                 src={carpic}
                 alt="Cartagena Travel Guide"
-                className="w-[320px] relative z-20"
+                className="w-[400px] h-[500px] relative z-20"
               />
             </div>
           </div>
@@ -329,7 +328,7 @@ const HomePage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-black text-white pt-20 pb-10">
+      {/* <footer className="bg-black text-white pt-20 pb-10">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
             <img src={logo} className="w-48 mb-6" alt="" />
@@ -395,7 +394,7 @@ const HomePage = () => {
           © LaCarta 2023 – 2025. All rights reserved | Privacy Policy | Terms &
           Conditions
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

@@ -2,7 +2,7 @@ const CircleCard = ({ image, category, title, author, time }) => (
   <div className="relative rounded-full overflow-hidden shadow-lg group aspect-square">
     <img
       src={image}
-      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      className="absolute inset-0 w-full h-full rounded-full object-cover transition-transform duration-500 group-hover:scale-105"
       alt=""
     />
 
