@@ -56,13 +56,13 @@ const Layout = ({ children }) => {
       <footer className="bg-black text-white pt-20 pb-10">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
-            <img src={logo} className="w-48 mb-6" alt="" />
-            <p className="text-gray-400 leading-relaxed mb-8">
+            <img src={logo} className="w-100 w-md-48 mb-6" alt="" />
+            <p className="text-gray-400 leading-relaxed mb-8 d-none d-md-block">
               We are native Cartagenero Costeños passionate about everything
               Cartagena. Our magazine is here to help you discover the marvels
               of Cartagena la Heroica.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-1">
               {[Facebook, Twitter, Instagram, Youtube, Linkedin].map(
                 (Icon, i) => (
                   <Link
@@ -77,10 +77,10 @@ const Layout = ({ children }) => {
             </div>
           </div>
 
-          <div>
+          <div className="d-none d-md-block">
             <h5 className="font-bold uppercase mb-6">About</h5>
             <ul className="space-y-3 text-gray-400">
-              {["About Us", "Contact", "Our Culture", "Work With Us"].map(
+              {["About Us", "Contact", "Our Culture", "Work With Us","Submit a Story", "Advertise with Us", "Editorial Standards"].map(
                 (l) => (
                   <li key={l}>
                     <Link to="#" className="hover:text-white">
@@ -92,10 +92,10 @@ const Layout = ({ children }) => {
             </ul>
           </div>
 
-          <div>
-            <h5 className="font-bold uppercase mb-6">Help</h5>
+          <div className="d-none d-md-block">
+            <h5 className="font-bold uppercase mb-6">Cartagena</h5>
             <ul className="space-y-3 text-gray-400">
-              {["FAQ", "Travel Guide", "Resources", "Safety Map"].map((l) => (
+              {["Activities","Hotels","Beach Trips","Rental","Medical", "Real Estate", "More"].map((l) => (
                 <li key={l}>
                   <Link to="#" className="hover:text-white">
                     {l}
@@ -105,7 +105,20 @@ const Layout = ({ children }) => {
             </ul>
           </div>
 
-          <div className="bg-[#71adf6] p-6 rounded-2xl text-black text-center">
+          <div className="text-center text-md-start">
+            <h5 className="font-bold uppercase mb-6">Help</h5>
+            <ul className="space-y-3 text-gray-400">
+              {["FAQ", "Travel Guide", "Resources", "Safety Map","Glossary", "Staying Safe", "Tourist Center"].map((l) => (
+                <li key={l}>
+                  <Link to="#" className="hover:text-white">
+                    {l}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-[#71adf6] p-6 rounded-2xl text-black text-center d-none d-md-block">
             <h4 className="font-bold uppercase">Cartagena, CO</h4>
             <p className="text-sm mb-4">Dec 19, 2025</p>
             <div className="text-4xl font-black mb-2">30°C</div>

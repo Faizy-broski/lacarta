@@ -6,12 +6,6 @@ import img3 from "../assets/img33.png";
 import img4 from "../assets/4.png";
 import img5 from "../assets/img5.png";
 import img6 from "../assets/img6.png";
-import img7 from "../assets/Six-C-img1.png";
-import img8 from "../assets/Six-C-img2.png";
-import img9 from "../assets/Six-C-img3.png";
-import img0 from "../assets/Six-C-img4.png";
-import profile from "../assets/profile-pic.png";
-import guidepic from "../assets/img13.png";
 import carpic from "../assets/car.png";
 import girlpic from "../assets/girl.png";
 import beachpic from "../assets/beach.png";
@@ -19,7 +13,6 @@ import shippic from "../assets/ship.png";
 import artpic from "../assets/art.png";
 import resturantpic from "../assets/resturant.png";
 import hotelpic from "../assets/hotels.png";
-import carasolepic from "../assets/carasole.png";
 
 import Card from "@/components/card/Card";
 import CircleCard from "@/components/card/CircularCard";
@@ -40,7 +33,9 @@ import {
   Youtube,
   Linkedin,
 } from "lucide-react";
-
+import HowToDoCartagena from "@/components/HowToCartagena";
+import TopNewsCartagena from "@/components/TopNewsCartagena";
+import ConciergeCTA from "@/components/ConciergeCTA";
 // Category Color Map to replace c1, c2, c3 etc.
 const catColors = {
   green: "bg-[#20bb59]",
@@ -54,44 +49,6 @@ const catColors = {
 const HomePage = () => {
   return (
     <div className="min-h-screen font-sans">
-      {/* Header */}
-      {/* <header className="flex flex-wrap items-center justify-between px-10 py-4 bg-black md:px-16">
-        <div>
-          <img src={logo} className="h-10 md:h-13 w-auto" alt="Logo" />
-        </div>
-
-        <nav className="hidden lg:flex items-center gap-6 text-sm uppercase text-white font-semibold">
-          {[
-            "Activities",
-            "Hotels",
-            "Beaches",
-            "Boating",
-            "Tours",
-            "Gastronomy",
-          ].map((item) => (
-            <Link
-              key={item}
-              className="hover:text-[#d0a439] transition-colors"
-              to=""
-            >
-              {item}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-4">
-          <Link to="#" className="text-white">
-            <Heart className="text-[#d0a439] w-6 h-6" />
-          </Link>
-          <Link to="#" className="text-white text-sm hidden md:block">
-            Login
-          </Link>
-          <Button className="bg-[#d0a439] hover:bg-[#b88f30] text-black font-bold rounded-sm px-6">
-            BOOK TRIP
-          </Button>
-        </div>
-      </header> */}
-
       {/* Hero Section */}
       <div
         className="relative bg-cover bg-center py-24 md:py-40"
@@ -128,7 +85,7 @@ const HomePage = () => {
               type="text"
               placeholder="Search for Anything"
             />
-            <Button className="bg-primary text-white px-6 py-2 font-bold hover:bg-[#b88f30] transition-colors">
+            <Button className="text-white px-6 py-2 font-bold bg-[#d0a439] hover:bg-[#b88f30] transition-colors">
               Search
             </Button>
           </div>
@@ -137,7 +94,7 @@ const HomePage = () => {
 
       {/* Section Title */}
       <div className="py-12 px-10 md:px-16 text-center">
-        <h2 className="text-3xl md:text-5xl font-serif font-extrabold uppercase text-black">
+        <h2 className="text-3xl md:text-4xl font-black text-black text-center uppercase mb-16">
           What to do in Cartagena, Colombia
         </h2>
       </div>
@@ -175,12 +132,12 @@ const HomePage = () => {
       {/* Masonry-style Section */}
       {/* <section className="py-12 px-10 md:px-16 bg-gray-50"> */}
       <div className=" text-center mb-7 mt-10">
-        <h2 className="text-3xl md:text-5xl font-serif font-extrabold uppercase text-black">
+        <h2 className="text-3xl md:text-4xl font-black text-black text-center uppercase mb-16">
           The best of Cartagena, Colombia
         </h2>
       </div>
 
-      <section className="container mx-auto pb-13 px-10 md:px-16">
+      <section className="container mb-5 mx-auto pb-13 px-10 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[260px]">
           {/* Beaches – Tall */}
           <Card
@@ -237,6 +194,7 @@ const HomePage = () => {
             title="The Best Street Art of Cartagena"
             author="Juan Pablo"
             time="5 min"
+            className="mt-5"
           />
         </div>
       </section>
@@ -281,32 +239,32 @@ const HomePage = () => {
 
       {/* Tools Section */}
       <div className="py-20 container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-black text-center uppercase mb-16">
+        <h2 className="text-3xl md:text-4xl font-black text-black text-center uppercase mb-16">
           Free tools for your journey
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {[
             {
               icon: <Headset />,
-              label: "Service Center",
+              label: "Tourist Service Center",
               color: catColors.gold,
             },
             {
               icon: <MessageCircleMore />,
-              label: "Chat Support",
+              label: "Catagena FAQs",
               color: catColors.green,
             },
             {
               icon: <FileSpreadsheet />,
-              label: "Checklists",
+              label: "Cartagena Travel Checklists",
               color: catColors.red,
             },
-            { icon: <Plus />, label: "Guides", color: catColors.gold },
-            { icon: <Music />, label: "Playlists", color: catColors.green },
+            { icon: <Plus />, label: "Cartagena Emergency Guides", color: catColors.gold },
+            { icon: <Music />, label: "Cartagena Spotify Playlists", color: catColors.green },
           ].map((tool, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl shadow-xl p-6 pt-12 relative text-center"
+              className="bg-white mt-5 rounded-2xl shadow-xl p-6 pt-12 relative text-start"
             >
               <div
                 className={`absolute -top-8 left-1/2 -translate-x-1/2 p-4 rounded-xl text-white shadow-lg ${tool.color}`}
@@ -326,75 +284,35 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+      
 
-      {/* Footer */}
-      {/* <footer className="bg-black text-white pt-20 pb-10">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2">
-            <img src={logo} className="w-48 mb-6" alt="" />
-            <p className="text-gray-400 leading-relaxed mb-8">
-              We are native Cartagenero Costeños passionate about everything
-              Cartagena. Our magazine is here to help you discover the marvels
-              of Cartagena la Heroica.
-            </p>
-            <div className="flex gap-4">
-              {[Facebook, Twitter, Instagram, Youtube, Linkedin].map(
-                (Icon, i) => (
-                  <Link
-                    key={i}
-                    to="#"
-                    className="p-2 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all"
-                  >
-                    <Icon size={20} />
-                  </Link>
-                )
-              )}
-            </div>
+      <ConciergeCTA></ConciergeCTA>
+
+      <HowToDoCartagena></HowToDoCartagena>
+
+      {/* Carasole Section */}
+      <TopNewsCartagena></TopNewsCartagena>
+
+      {/* Search Section */}
+<div className='overlayed-pic container-fluid p-3 text-light p-relative'>
+  <div className='overlay'>
+  <div className='container col-lg-8 col-md-8 col-12 mb-4 py-5 mb-md-0 m-auto text-center text-white'>
+    <h2  className='fs-1 fw-bold'>CARTAGENA NEWSLETTER</h2>
+    <p className='fs-5 my-3'>Get the latest discounts, deals, coupons, news, & tips of Cartagena.</p>
+    <div className="flex max-w-2xl mx-auto bg-white rounded-md overflow-hidden p-1">
+            <input
+              className="flex-grow p-3 text-black outline-none"
+              type="email"
+              placeholder="Enter Your Email"
+            />
+            <Button className="text-white px-6 py-2 font-bold bg-[#d0a439] hover:bg-[#b88f30] transition-colors">
+              SUBSCRIBE
+            </Button>
           </div>
+  </div>
+  </div>
+</div>
 
-          <div>
-            <h5 className="font-bold uppercase mb-6">About</h5>
-            <ul className="space-y-3 text-gray-400">
-              {["About Us", "Contact", "Our Culture", "Work With Us"].map(
-                (l) => (
-                  <li key={l}>
-                    <Link to="#" className="hover:text-white">
-                      {l}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="font-bold uppercase mb-6">Help</h5>
-            <ul className="space-y-3 text-gray-400">
-              {["FAQ", "Travel Guide", "Resources", "Safety Map"].map((l) => (
-                <li key={l}>
-                  <Link to="#" className="hover:text-white">
-                    {l}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="bg-[#71adf6] p-6 rounded-2xl text-black text-center">
-            <h4 className="font-bold uppercase">Cartagena, CO</h4>
-            <p className="text-sm mb-4">Dec 19, 2025</p>
-            <div className="text-4xl font-black mb-2">30°C</div>
-            <p className="font-semibold uppercase tracking-widest">
-              Few Clouds
-            </p>
-          </div>
-        </div>
-
-        <div className="container mx-auto px-4 mt-20 pt-8 border-t border-white/10 text-center text-sm text-gray-500">
-          © LaCarta 2023 – 2025. All rights reserved | Privacy Policy | Terms &
-          Conditions
-        </div>
-      </footer> */}
     </div>
   );
 };
