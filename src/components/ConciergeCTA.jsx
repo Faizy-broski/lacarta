@@ -9,12 +9,12 @@ export default function ConciergeCTA() {
 
       {/* Left content */}
       <div className="col-md-7">
-        <h2 className='fonted-title'>Concierge Cartagena Travel Guides</h2>
-        <p className='fs-5 my-4'>
+        <h2 className='fonted-title text-black fw-bold'>Concierge Cartagena Travel Guides</h2>
+        <p className='fs-5 my-4 text-black'>
           From flights, accommodations, stays, and activities.
           You’re in safe hands with our team!
         </p>
-        <button className="btn c2 text-light btn-md w-100">BOOK TRIP</button>
+        <button className="btn text-light bg-gradient-to-r from-[#E6B65C] via-[#D4A74A] to-[#B8902F] hover:brightness-110 btn-md w-100">BOOK TRIP</button>
       </div>
 
       {/* Right image */}

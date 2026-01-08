@@ -35,10 +35,10 @@ export default function TopNewsCartagena() {
           
                 {/* Content */}
                 <div className="col-lg-4 col-md-5 mt-4 mt-md-0">
-                  <div className='d-flex my-4 align-items-center'>
+                  <div className='d-flex my-5 align-items-center'>
                    <div>
                      <span>Accomodation - Hotels</span>
-                    <h5 className="fw-bold">the most luxurious hotel of cartagena</h5>
+                    <h5 className="fw-bold my-2 text-black">the most luxurious hotel of cartagena</h5>
                     <span>3 Min Read</span>
                    </div>
                    <div>
@@ -46,10 +46,12 @@ export default function TopNewsCartagena() {
                    </div>
                   </div>
           
-                   <div className='d-flex my-4 align-items-center'>
+                   <div className='d-flex my-5 align-items-center'>
                    <div>
                      <span>Accomodation - Hotels</span>
-                    <h5 className="fw-bold">the most luxurious hotel of cartagena</h5>
+                    <h5 className="fw-bold my-2 text-black">Want To Exercise? The
+Best Spots For All Types
+Of Workouts</h5>
                     <span>3 Min Read</span>
                    </div>
                    <div>
@@ -57,10 +59,12 @@ export default function TopNewsCartagena() {
                    </div>
                   </div>
           
-                   <div className='d-flex my-4 align-items-center'>
+                   <div className='d-flex my-5 align-items-center'>
                    <div>
                      <span>Accomodation - Hotels</span>
-                    <h5 className="fw-bold">the most luxurious hotel of cartagena</h5>
+                    <h5 className="fw-bold my-2 text-black">the top 7
+instagrammable places of
+cartagena</h5>
                     <span>3 Min Read</span>
                    </div>
                    <div>

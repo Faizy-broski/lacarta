@@ -20,9 +20,12 @@ export default {
     extend: {
       fontFamily: {
         // This makes Times New Roman the default serif font
-        serif: ['"Times New Roman"', 'Times', 'serif'],
+        serif: ['"Times New Roman"', 'Moonscape','Times', 'serif'],
       },
       colors: {
+        greenStart: "#3BCF8E",
+        greenMid: "#2EB872",
+        greenEnd: "#1E9E5A",
         placeholderColor: {
           light: "#e9e9e9",
           text: "#33333",

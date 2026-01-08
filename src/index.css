@@ -4,6 +4,13 @@
 
 /* Parish Design System - Dark Theme with Peach/Gold & Sage Green Accents */
 
+@font-face {
+  font-family: 'Moonscape';
+  src: url('./assets/fonts/MoonscapeDemo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   :root {
     /* Dark theme base colors */

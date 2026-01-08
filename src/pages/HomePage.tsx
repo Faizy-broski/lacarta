@@ -56,11 +56,11 @@ const HomePage = () => {
       >
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-7xl font-serif font-black leading-tight mb-8">
+          <h1 className="text-4xl md:text-7xl font-moonscape font-black leading-tight mb-8">
             EVERYTHING <br /> CARTAGENA
           </h1>
 
-          <nav className="flex flex-wrap justify-center gap-3 mb-10">
+          <nav className="lg:flex hidden flex-wrap justify-center gap-3 mb-10">
             {[
               "Beaches",
               "Accommodations",
@@ -81,11 +81,11 @@ const HomePage = () => {
 
           <div className="flex max-w-2xl mx-auto bg-white rounded-md overflow-hidden p-1">
             <input
-              className="flex-grow p-3 text-black outline-none"
+              className="flex-grow p-2 text-black outline-none"
               type="text"
               placeholder="Search for Anything"
             />
-            <Button className="text-white px-6 py-2 font-bold bg-[#d0a439] hover:bg-[#b88f30] transition-colors">
+            <Button className="text-white my-auto px-6 py-2 font-bold bg-[#d0a439] hover:bg-[#b88f30] transition-colors">
               Search
             </Button>
           </div>
@@ -103,19 +103,19 @@ const HomePage = () => {
       <div className="container mx-auto pb-20 px-10 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { label: "Hotels", img: img1, color: catColors.gold },
-            { label: "Beaches", img: img2, color: catColors.green },
-            { label: "Activities", img: img3, color: catColors.red },
-            { label: "Tours & Sightseeing", img: img4, color: catColors.gold },
-            { label: "Boat Rentals", img: img5, color: catColors.green },
-            { label: "Gastronomy", img: img6, color: catColors.red },
+            { label: "Hotels", img: img1, color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]" },
+            { label: "Beaches", img: img2, color: "from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]" },
+            { label: "Activities", img: img3, color: "from-[#C62828] via-[#B71C1C] to-[#8E0000]" },
+            { label: "Tours & Sightseeing", img: img4, color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]" },
+            { label: "Boat Rentals", img: img5, color: "  from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]" },
+            { label: "Gastronomy", img: img6, color: "from-[#C62828] via-[#B71C1C] to-[#8E0000]" },
           ].map((item, idx) => (
             <div
               key={idx}
               className="relative group overflow-hidden cursor-pointer"
             >
               <div
-                className={`absolute top-0 left-0 w-full p-3 text-white font-bold text-center z-10 ${item.color}`}
+                className={`absolute top-0 left-0 w-full p-2 text-white font-bold fs-5 text-center z-10 bg-gradient-to-r ${item.color}`}
               >
                 {item.label}
               </div>
@@ -218,7 +218,9 @@ const HomePage = () => {
                 Gringos.
               </p>
 
-              <Button className="inline-block bg-[#20bb59] text-white px-6 py-3 rounded-md font-semibold text-sm">
+              <Button className="px-6 py-3 text-white font-semibold rounded-lg 
+bg-gradient-to-r from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A] hover:brightness-110
+transition">
                 <a href="https://lacarta.co/cartagena/resources/">
                   https://lacarta.co/cartagena/resources/
                 </a>
@@ -247,40 +249,60 @@ const HomePage = () => {
             {
               icon: <Headset />,
               label: "Tourist Service Center",
-              color: catColors.gold,
+              color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]",
+              paragraph : "If you ever need any help during your time in Cartagena!",
+              buttonTxt : "GO"
             },
             {
               icon: <MessageCircleMore />,
               label: "Catagena FAQs",
-              color: catColors.green,
+              color: "from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]",
+              paragraph : "Cartagena's Most Frequently Asked Questions",
+              buttonTxt : "Download"
             },
             {
               icon: <FileSpreadsheet />,
               label: "Cartagena Travel Checklists",
-              color: catColors.red,
+              color: "from-[#C62828] via-[#B71C1C] to-[#8E0000]",
+              paragraph : "Everything you must do before boarding your flight to Cartagena, Colombia!",
+              buttonTxt : "Checkoff"
             },
-            { icon: <Plus />, label: "Cartagena Emergency Guides", color: catColors.gold },
-            { icon: <Music />, label: "Cartagena Spotify Playlists", color: catColors.green },
+            { icon: <Plus />, label: "Cartagena Emergency Guides", color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]"
+              ,paragraph : "Save our Emergency Guide with you at all times for all the police stations, hospitals, and medical services!",
+              buttonTxt : "Download"
+             },
+            { icon: <Music />, label: "Cartagena Spotify Playlists", color: "from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]" ,paragraph : "Enhance your Cartagena trip by immersing yourself to the Cartagena Carribean beats!",
+              buttonTxt : "Download"},
           ].map((tool, i) => (
-            <div
-              key={i}
-              className="bg-white mt-5 rounded-2xl shadow-xl p-6 pt-12 relative text-start"
-            >
-              <div
-                className={`absolute -top-8 left-1/2 -translate-x-1/2 p-4 rounded-xl text-white shadow-lg ${tool.color}`}
-              >
-                {tool.icon}
-              </div>
-              <h5 className="font-bold text-lg mb-4">{tool.label}</h5>
-              <p className="text-sm text-gray-500 mb-6">
-                Need help during your time in Cartagena?
-              </p>
-              <button
-                className={`w-full py-2 rounded-lg text-white font-bold ${tool.color}`}
-              >
-                Go
-              </button>
-            </div>
+                <div
+  key={i}
+  className="bg-white mt-5 rounded-2xl shadow-lg p-6 pt-12 relative text-start 
+             flex flex-col h-auto"
+>
+  <div
+    className={`absolute -top-8 left-1/2 -translate-x-1/2 
+              w-14 h-14 flex items-center border-4 border-white justify-center
+              rounded-full text-white shadow-lg bg-gradient-to-r ${tool.color}`}
+  >
+    {tool.icon}
+  </div>
+
+  <h5 className="font-bold text-black">
+    {tool.label}
+  </h5>
+
+  {/* This section will auto-adjust */}
+  <p className="text-xs fw-bold pt-3 text-gray-500 flex-grow">
+    {tool.paragraph}
+  </p>
+
+  {/* Button always at bottom */}
+  <button
+    className={`w-full py-2 mt-6 rounded-lg text-white font-bold bg-gradient-to-r hover:brightness-110 ${tool.color}`}
+  >
+    {tool.buttonTxt}
+  </button>
+</div>
           ))}
         </div>
       </div>
@@ -301,11 +323,11 @@ const HomePage = () => {
     <p className='fs-5 my-3'>Get the latest discounts, deals, coupons, news, & tips of Cartagena.</p>
     <div className="flex max-w-2xl mx-auto bg-white rounded-md overflow-hidden p-1">
             <input
-              className="flex-grow p-3 text-black outline-none"
+              className="flex-grow p-2 text-black outline-none"
               type="email"
               placeholder="Enter Your Email"
             />
-            <Button className="text-white px-6 py-2 font-bold bg-[#d0a439] hover:bg-[#b88f30] transition-colors">
+            <Button className="text-white my-auto px-6 py-2 font-bold bg-[#d0a439] hover:bg-[#b88f30] transition-colors">
               SUBSCRIBE
             </Button>
           </div>
