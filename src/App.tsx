@@ -1,7 +1,13 @@
 import "../src/Custom-Css/Homepage.css";
 import HomePage from "./pages/HomePage";
-
+import Activities from "@/pages/Activities";
+import Hotels from "@/pages/Hotels";
+import Gastronomy from "@/pages/Gastronomy";
+import Beaches from "@/pages/Beaches";
+import Boating from "@/pages/Boating";
+import RealEstate from "@/pages/RealEstate";
 import Layout from "@/components/layout/Layout";
+import ProjectDetails from "@/pages/DetailsPage";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -21,6 +27,62 @@ function App() {
             element={
               <Layout>
                 <HomePage />
+              </Layout>
+            }
+          />
+           <Route
+            path="/activities"
+            element={
+              <Layout>
+                <Activities />
+              </Layout>
+            }
+          />
+           <Route
+            path="/hotels"
+            element={
+              <Layout>
+                <Hotels />
+              </Layout>
+            }
+          />
+           <Route
+            path="/gastronomy"
+            element={
+              <Layout>
+                <Gastronomy />
+              </Layout>
+            }
+          />
+           <Route
+            path="/beaches"
+            element={
+              <Layout>
+                <Beaches />
+              </Layout>
+            }
+          />
+           <Route
+            path="/boating"
+            element={
+              <Layout>
+                <Boating />
+              </Layout>
+            }
+          />
+           <Route
+            path="/realEstate"
+            element={
+              <Layout>
+                <RealEstate />
+              </Layout>
+            }
+          />
+          <Route
+            path="/projectDetails"
+            element={
+              <Layout>
+                <ProjectDetails />
               </Layout>
             }
           />
