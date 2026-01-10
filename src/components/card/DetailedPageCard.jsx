@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default function DetailedCard({details = [],heading,columns}){
     return(
         <section className="w-full px-5 py-16">
-        <h2 className="mb-8 text-4xl text-black font-bold">{heading}</h2>
+        <h2 className="mb-8 text-2xl md:text-4xl text-black font-bold">{heading}</h2>
         
         
         <div className={`${columns}`}>

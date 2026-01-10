@@ -8,6 +8,7 @@ import Boating from "@/pages/Boating";
 import RealEstate from "@/pages/RealEstate";
 import Layout from "@/components/layout/Layout";
 import ProjectDetails from "@/pages/DetailsPage";
+import RealestatePage from "@/pages/Real-Estate-Page";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -83,6 +84,14 @@ function App() {
             element={
               <Layout>
                 <ProjectDetails />
+              </Layout>
+            }
+          />
+          <Route
+            path="/real-Estate"
+            element={
+              <Layout>
+                <RealestatePage />
               </Layout>
             }
           />
