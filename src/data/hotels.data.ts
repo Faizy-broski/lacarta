@@ -1,10 +1,9 @@
-import img1 from '../assets/activitiesHero.png'
-import img2 from '../assets/Food.png'
-import img3 from '../assets/Fish.png'
-
+import img1 from "../assets/activitiesHero.png";
+import img2 from "../assets/Food.png";
+import img3 from "../assets/Fish.png";
 
 export const hotelsData = {
-   hero: {
+  hero: {
     title: "THE BEST HOTELS IN CARTAGENA",
     subtitle: "Luxury, boutique, and unique stays",
     bgImage: img1,
@@ -51,6 +50,6 @@ export const hotelsData = {
     { id: 5, title: "Family Friendly", image: img3 },
     { id: 6, title: "Historic Hotels", image: img3 },
     { id: 7, title: "Resorts", image: img3 },
-    { id: 8, title: "Apart-Hotels", image: img3 }
+    { id: 8, title: "Apart-Hotels", image: img3 },
   ],
 };

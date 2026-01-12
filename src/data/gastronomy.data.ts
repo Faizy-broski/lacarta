@@ -1,10 +1,8 @@
-import img1 from '../assets/activitiesHero.png'
-import img2 from '../assets/Food.png'
-import img3 from '../assets/Fish.png'
-
+import img1 from "../assets/activitiesHero.png";
+import img2 from "../assets/Food.png";
+import img3 from "../assets/Fish.png";
 
 export const gastronomyData = {
-
   hero: {
     title: "THE BEST GASTRONOMY IN CARTAGENA",
     subtitle: "Top restaurants, flavors, and culinary experiences",
@@ -53,6 +51,5 @@ export const gastronomyData = {
     { id: 6, title: "Seafood", image: img3 },
     { id: 7, title: "Cocktail Bars", image: img3 },
     { id: 8, title: "Desserts", image: img3 },
-
   ],
 };

@@ -1,6 +1,6 @@
 // components/RealEstateThemes.tsx
-import { Badge } from "@/components/ui/badge"
-import fishImg from "../../assets/fish.png"
+import { Badge } from "@/components/ui/badge";
+import fishImg from "../../assets/fish.png";
 
 const themes = [
   {
@@ -52,11 +52,11 @@ const themes = [
     image: fishImg,
     tag: "PREMIUM",
   },
-]
+];
 
 export default function EstateThemes() {
-  const featured = themes.find((t) => t.featured)
-  const others = themes.filter((t) => !t.featured)
+  const featured = themes.find((t) => t.featured);
+  const others = themes.filter((t) => !t.featured);
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-muted/30">
@@ -122,5 +122,5 @@ export default function EstateThemes() {
         </div>
       </div>
     </section>
-  )
+  );
 }

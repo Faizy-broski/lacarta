@@ -36,7 +36,7 @@ import {
 import HowToDoCartagena from "@/components/HowToCartagena";
 import TopNewsCartagena from "@/components/TopNewsCartagena";
 import ConciergeCTA from "@/components/ConciergeCTA";
-import CartagenaNews from "@/components/layout/cartagenaNews";
+import CartagenaNews from "@/components/cartagenaNews";
 
 // Category Color Map to replace c1, c2, c3 etc.
 const catColors = {
@@ -47,6 +47,15 @@ const catColors = {
   teal: "bg-[#5bc7c1]",
   red: "bg-[#f52929]",
 };
+
+const NAV_LINKS = [
+  { label: "Beaches", path: "/beaches" },
+  { label: "Accommodations", path: "/hotels" },
+  { label: "Boating", path: "/boating" },
+  { label: "Tours", path: "/tours" },
+  { label: "Activities", path: "/activities" },
+  { label: "Gastronomy", path: "/gastronomy" },
+];
 
 const HomePage = () => {
   return (
@@ -63,20 +72,13 @@ const HomePage = () => {
           </h1>
 
           <nav className="lg:flex hidden flex-wrap justify-center gap-3 mb-10">
-            {[
-              "Beaches",
-              "Accommodations",
-              "Boating",
-              "Tours",
-              "Activities",
-              "Gastronomy",
-            ].map((tag) => (
+            {NAV_LINKS.map(({ label, path }) => (
               <Link
-                key={tag}
-                to="#"
+                key={label}
+                to={path}
                 className="bg-white text-black px-4 py-2 text-sm font-bold rounded-sm hover:bg-gray-200"
               >
-                {tag}
+                {label}
               </Link>
             ))}
           </nav>
@@ -105,12 +107,36 @@ const HomePage = () => {
       <div className="container mx-auto pb-20 px-10 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { label: "Hotels", img: img1, color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]" },
-            { label: "Beaches", img: img2, color: "from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]" },
-            { label: "Activities", img: img3, color: "from-[#C62828] via-[#B71C1C] to-[#8E0000]" },
-            { label: "Tours & Sightseeing", img: img4, color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]" },
-            { label: "Boat Rentals", img: img5, color: "  from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]" },
-            { label: "Gastronomy", img: img6, color: "from-[#C62828] via-[#B71C1C] to-[#8E0000]" },
+            {
+              label: "Hotels",
+              img: img1,
+              color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]",
+            },
+            {
+              label: "Beaches",
+              img: img2,
+              color: "from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]",
+            },
+            {
+              label: "Activities",
+              img: img3,
+              color: "from-[#C62828] via-[#B71C1C] to-[#8E0000]",
+            },
+            {
+              label: "Tours & Sightseeing",
+              img: img4,
+              color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]",
+            },
+            {
+              label: "Boat Rentals",
+              img: img5,
+              color: "  from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]",
+            },
+            {
+              label: "Gastronomy",
+              img: img6,
+              color: "from-[#C62828] via-[#B71C1C] to-[#8E0000]",
+            },
           ].map((item, idx) => (
             <div
               key={idx}
@@ -220,9 +246,11 @@ const HomePage = () => {
                 Gringos.
               </p>
 
-              <Button className="px-6 py-3 text-white font-semibold rounded-lg 
+              <Button
+                className="px-6 py-3 text-white font-semibold rounded-lg 
 bg-gradient-to-r from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A] hover:brightness-110
-transition">
+transition"
+              >
                 <a href="https://lacarta.co/cartagena/resources/">
                   https://lacarta.co/cartagena/resources/
                 </a>
@@ -252,74 +280,82 @@ transition">
               icon: <Headset />,
               label: "Tourist Service Center",
               color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]",
-              paragraph : "If you ever need any help during your time in Cartagena!",
-              buttonTxt : "GO"
+              paragraph:
+                "If you ever need any help during your time in Cartagena!",
+              buttonTxt: "GO",
             },
             {
               icon: <MessageCircleMore />,
               label: "Catagena FAQs",
               color: "from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]",
-              paragraph : "Cartagena's Most Frequently Asked Questions",
-              buttonTxt : "Download"
+              paragraph: "Cartagena's Most Frequently Asked Questions",
+              buttonTxt: "Download",
             },
             {
               icon: <FileSpreadsheet />,
               label: "Cartagena Travel Checklists",
               color: "from-[#C62828] via-[#B71C1C] to-[#8E0000]",
-              paragraph : "Everything you must do before boarding your flight to Cartagena, Colombia!",
-              buttonTxt : "Checkoff"
+              paragraph:
+                "Everything you must do before boarding your flight to Cartagena, Colombia!",
+              buttonTxt: "Checkoff",
             },
-            { icon: <Plus />, label: "Cartagena Emergency Guides", color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]"
-              ,paragraph : "Save our Emergency Guide with you at all times for all the police stations, hospitals, and medical services!",
-              buttonTxt : "Download"
-             },
-            { icon: <Music />, label: "Cartagena Spotify Playlists", color: "from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]" ,paragraph : "Enhance your Cartagena trip by immersing yourself to the Cartagena Carribean beats!",
-              buttonTxt : "Download"},
+            {
+              icon: <Plus />,
+              label: "Cartagena Emergency Guides",
+              color: "from-[#E6B65C] via-[#D4A74A] to-[#B8902F]",
+              paragraph:
+                "Save our Emergency Guide with you at all times for all the police stations, hospitals, and medical services!",
+              buttonTxt: "Download",
+            },
+            {
+              icon: <Music />,
+              label: "Cartagena Spotify Playlists",
+              color: "from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A]",
+              paragraph:
+                "Enhance your Cartagena trip by immersing yourself to the Cartagena Carribean beats!",
+              buttonTxt: "Download",
+            },
           ].map((tool, i) => (
-                <div
-  key={i}
-  className="bg-white mt-5 rounded-2xl shadow-lg p-6 pt-12 relative text-start 
+            <div
+              key={i}
+              className="bg-white mt-5 rounded-2xl shadow-lg p-6 pt-12 relative text-start 
              flex flex-col h-auto"
->
-  <div
-    className={`absolute -top-8 left-1/2 -translate-x-1/2 
+            >
+              <div
+                className={`absolute -top-8 left-1/2 -translate-x-1/2 
               w-14 h-14 flex items-center border-4 border-white justify-center
               rounded-full text-white shadow-lg bg-gradient-to-r ${tool.color}`}
-  >
-    {tool.icon}
-  </div>
+              >
+                {tool.icon}
+              </div>
 
-  <h5 className="font-bold text-black">
-    {tool.label}
-  </h5>
+              <h5 className="font-bold text-black">{tool.label}</h5>
 
-  {/* This section will auto-adjust */}
-  <p className="text-xs fw-bold pt-3 text-gray-500 flex-grow">
-    {tool.paragraph}
-  </p>
+              {/* This section will auto-adjust */}
+              <p className="text-xs fw-bold pt-3 text-gray-500 flex-grow">
+                {tool.paragraph}
+              </p>
 
-  {/* Button always at bottom */}
-  <button
-    className={`w-full py-2 mt-6 rounded-lg text-white font-bold bg-gradient-to-r hover:brightness-110 ${tool.color}`}
-  >
-    {tool.buttonTxt}
-  </button>
-</div>
+              {/* Button always at bottom */}
+              <button
+                className={`w-full py-2 mt-6 rounded-lg text-white font-bold bg-gradient-to-r hover:brightness-110 ${tool.color}`}
+              >
+                {tool.buttonTxt}
+              </button>
+            </div>
           ))}
         </div>
       </div>
-      
 
-      <ConciergeCTA></ConciergeCTA>
+      <ConciergeCTA />
 
-      <HowToDoCartagena></HowToDoCartagena>
+      <HowToDoCartagena />
 
       {/* Carasole Section */}
-      <TopNewsCartagena></TopNewsCartagena>
+      <TopNewsCartagena />
 
       {/* Search Section */}
-      <CartagenaNews></CartagenaNews>
-
+      <CartagenaNews />
     </div>
   );
 };

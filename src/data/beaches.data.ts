@@ -1,10 +1,9 @@
-import img1 from '../assets/activitiesHero.png'
-import img2 from '../assets/Food.png'
-import img3 from '../assets/Fish.png'
-
+import img1 from "../assets/activitiesHero.png";
+import img2 from "../assets/Food.png";
+import img3 from "../assets/Fish.png";
 
 export const beachesData = {
-   hero: {
+  hero: {
     title: "THE BEST BEACHES IN CARTAGENA",
     subtitle: "Relax, swim, and explore the Caribbean coast",
     bgImage: img1,
@@ -34,7 +33,6 @@ export const beachesData = {
       image: img3,
       rating: 4.4,
     },
-   
   ],
 
   categories: [

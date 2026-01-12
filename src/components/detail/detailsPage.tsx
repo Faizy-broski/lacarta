@@ -6,11 +6,11 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-import { Card, CardContent,CardHeader } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Checkbox } from "@/components/ui/checkbox"
+} from "@/components/ui/accordion";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
 
 import {
   Snowflake,
@@ -21,8 +21,7 @@ import {
   Waves,
   PawPrint,
   Mountain,
-} from "lucide-react"
-
+} from "lucide-react";
 
 export default function ProjectDetailsPage({ project }) {
   const [activeImage, setActiveImage] = useState(0);
@@ -59,9 +58,8 @@ export default function ProjectDetailsPage({ project }) {
             <p className="font-bold text-gray-700">
               Starting at <strong>${project.price}</strong> / month
             </p>
-            {project.keyFeature.map((i)=>(
-              <li className="font-italic mx-3 text-muted-foreground">{i}
-            </li>
+            {project.keyFeature.map((i) => (
+              <li className="font-italic mx-3 text-muted-foreground">{i}</li>
             ))}
           </CardHeader>
 
@@ -92,135 +90,141 @@ export default function ProjectDetailsPage({ project }) {
               }
               className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 shadow"
             >
-              <ChevronRight  className="text-black" />
+              <ChevronRight className="text-black" />
             </button>
           </div>
 
           {/* THUMBNAILS */}
-<div className="flex gap-2 p-4 overflow-x-auto pb-2">
-  {project.images.map((img, index) => (
-    <div 
-      key={index}
-      onClick={() => setActiveImage(index)}
-      className={`
+          <div className="flex gap-2 p-4 overflow-x-auto pb-2">
+            {project.images.map((img, index) => (
+              <div
+                key={index}
+                onClick={() => setActiveImage(index)}
+                className={`
         flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 transition-all
-        ${index === activeImage 
-          ? "border-green-500 shadow-sm" 
-          : "border-transparent hover:border-gray-300"}
+        ${
+          index === activeImage
+            ? "border-green-500 shadow-sm"
+            : "border-transparent hover:border-gray-300"
+        }
       `}
-    >
-      <img
-        src={img}
-        className="h-20 w-28 object-cover"  
-        alt={`Thumbnail ${index + 1}`}
-      />
-    </div>
-  ))}
-</div>
+              >
+                <img
+                  src={img}
+                  className="h-20 w-28 object-cover"
+                  alt={`Thumbnail ${index + 1}`}
+                />
+              </div>
+            ))}
+          </div>
         </Card>
 
-{/* Main Content */}
+        {/* Main Content */}
 
         <div className="max-w-7xl mx-auto px-0 py-10">
-       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {/* LEFT CONTENT */}
+            <div className="md:col-span-2 space-y-6">
+              {/* Header */}
+              <div className="flex gap-4">
+                <img
+                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+                  className="w-20 h-20 rounded-lg object-cover"
+                />
+                <div>
+                  <h2 className="text-xl text-black font-bold">
+                    Market rental habitats
+                  </h2>
+                  <p className="text-sm text-muted-foreground">
+                    Market rental habitats offer a multitude of advantages to
+                    their residents, thanks to a prime location in the heart of
+                    Chomedey, Laval...
+                  </p>
+                  <button className="text-green-600 text-sm mt-1">
+                    Full description +
+                  </button>
+                </div>
+              </div>
 
-         {/* LEFT CONTENT */}
-         <div className="md:col-span-2 space-y-6">
+              {/* Accordions */}
+              <Accordion type="multiple" className="w-full">
+                {[
+                  "Contact details and website for this project",
+                  "Real estate developer(s)",
+                  "Features",
+                  "User comment(s) (0)",
+                  "Blog posts related to this project",
+                ].map((item, i) => (
+                  <AccordionItem key={i} value={`item-${i}`}>
+                    <AccordionTrigger className="text-black">
+                      {item}
+                    </AccordionTrigger>
+                    <AccordionContent>Content goes here</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
 
-           {/* Header */}
-           <div className="flex gap-4">
-             <img
-              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
-              className="w-20 h-20 rounded-lg object-cover"
-            />
-            <div>
-              <h2 className="text-xl text-black font-bold">
-                Market rental habitats
-              </h2>
-              <p className="text-sm text-muted-foreground">
-                Market rental habitats offer a multitude of advantages to their
-                residents, thanks to a prime location in the heart of Chomedey,
-                Laval...
-              </p>
-              <button className="text-green-600 text-sm mt-1">
-                Full description +
-              </button>
+              {/* Features Grid */}
+              <div>
+                <h3 className="font-bold text-black my-4">Features</h3>
+
+                <div className="grid gap-2 grid-cols-2 lg:grid-cols-4">
+                  <Feature icon={Snowflake} label="Air conditioning" />
+                  <Feature icon={Zap} label="Charging stations" />
+                  <Feature icon={Car} label="Indoor parking" />
+                  <Feature icon={Bike} label="Bike storage" />
+                  <Feature icon={Dumbbell} label="Gym" />
+                  <Feature icon={Waves} label="Indoor pool" />
+                  <Feature icon={PawPrint} label="Pets allowed" />
+                  <Feature icon={Mountain} label="Rooftop terrace" />
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* Accordions */}
-          <Accordion type="multiple" className="w-full">
-            {[
-              "Contact details and website for this project",
-              "Real estate developer(s)",
-              "Features",
-              "User comment(s) (0)",
-              "Blog posts related to this project",
-            ].map((item, i) => (
-              <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger className="text-black">{item}</AccordionTrigger>
-                <AccordionContent>
-                  Content goes here
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+            {/* RIGHT FORM */}
+            <div className="md:sticky md:top-6 h-fit">
+              <Card className="shadow">
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-lg text-black font-bold">
+                    Interested in this project?
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Let us share your request with similar COLLECTIONS listings.
+                  </p>
 
-          {/* Features Grid */}
-          <div>
-            <h3 className="font-bold text-black my-4">Features</h3>
+                  <label className="text-muted-foreground fw-bold mx-1 py-0">
+                    Your Name
+                  </label>
+                  <Input placeholder="John Doe" />
+                  <label className="text-muted-foreground fw-bold mx-1 py-0">
+                    Your Phone
+                  </label>
+                  <Input placeholder="(514) 555-0123" />
+                  <label className="text-muted-foreground fw-bold mx-1 py-0">
+                    Your Email
+                  </label>
+                  <Input placeholder="john@example.com" />
 
-            <div className="grid gap-2 grid-cols-2 lg:grid-cols-4">
-              <Feature icon={Snowflake} label="Air conditioning" />
-              <Feature icon={Zap} label="Charging stations" />
-              <Feature icon={Car} label="Indoor parking" />
-              <Feature icon={Bike} label="Bike storage" />
-              <Feature icon={Dumbbell} label="Gym" />
-              <Feature icon={Waves} label="Indoor pool" />
-              <Feature icon={PawPrint} label="Pets allowed" />
-              <Feature icon={Mountain} label="Rooftop terrace" />
+                  <div className="flex items-center text-muted-foreground p-3 gap-2 text-sm">
+                    <Checkbox id="robot" />
+                    <label htmlFor="robot">I'm not a robot</label>
+                  </div>
+
+                  <div className="flex items-center gap-2 text-muted-foreground text-xs">
+                    <Checkbox id="agree" />
+                    <label htmlFor="agree">
+                      I agree to receive communications from Guide Immo
+                    </label>
+                  </div>
+
+                  <Button className="w-full text-white font-bold rounded-full bg-gradient-to-r from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A] hover:brightness-110">
+                    Submit
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
-
-        {/* RIGHT FORM */}
-        <div className="md:sticky md:top-6 h-fit">
-          <Card className="shadow">
-            <CardContent className="p-6 space-y-4">
-              <h3 className="text-lg text-black font-bold">
-                Interested in this project?
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Let us share your request with similar COLLECTIONS listings.
-              </p>
-
-              <label className="text-muted-foreground fw-bold mx-1 py-0">Your Name</label>
-              <Input placeholder="John Doe" />
-              <label className="text-muted-foreground fw-bold mx-1 py-0">Your Phone</label>
-              <Input placeholder="(514) 555-0123" />
-              <label className="text-muted-foreground fw-bold mx-1 py-0">Your Email</label>
-              <Input placeholder="john@example.com" />
-
-              <div className="flex items-center text-muted-foreground p-3 gap-2 text-sm">
-                <Checkbox id="robot" />
-                <label htmlFor="robot">I'm not a robot</label>
-              </div>
-
-              <div className="flex items-center gap-2 text-muted-foreground text-xs">
-                <Checkbox id="agree" />
-                <label htmlFor="agree">
-                  I agree to receive communications from Guide Immo
-                </label>
-              </div>
-
-              <Button className="w-full text-white font-bold rounded-full bg-gradient-to-r from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A] hover:brightness-110">
-                Submit
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </div>
       </div>
     </div>
   );
@@ -232,7 +236,7 @@ function Feature({ icon: Icon, label }) {
       <Icon className="w-6 h-6 text-muted-foreground" />
       <span className="text-sm">{label}</span>
     </div>
-  )
+  );
 }
 
 // import {
