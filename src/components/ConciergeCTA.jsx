@@ -14,7 +14,7 @@ export default function ConciergeCTA() {
           From flights, accommodations, stays, and activities.
           You’re in safe hands with our team!
         </p>
-        <button className="btn text-light bg-gradient-to-r from-[#E6B65C] via-[#D4A74A] to-[#B8902F] hover:brightness-110 btn-md w-100">BOOK TRIP</button>
+        <button className="btn text-light font-bold bg-gradient-to-r from-[#E6B65C] via-[#D4A74A] to-[#B8902F] hover:brightness-110 btn-md w-100">BOOK TRIP</button>
       </div>
 
       {/* Right image */}
@@ -36,7 +36,7 @@ export default function ConciergeCTA() {
         From flights, accommodations, stays, and activities.
         You’re in safe hands with our team!
       </p>
-      <button className="btn c2 text-light btn-md w-100">BOOK TRIP</button>
+      <button className="btn c2 font-bold text-light btn-md w-100">BOOK TRIP</button>
     </div>
   </div>
 </div> 

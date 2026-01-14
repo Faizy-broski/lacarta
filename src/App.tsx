@@ -72,7 +72,7 @@ function App() {
             }
           />
            <Route
-            path="/realEstate"
+            path="/"
             element={
               <Layout>
                 <RealEstate />

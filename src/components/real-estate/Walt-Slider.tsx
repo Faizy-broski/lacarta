@@ -1,39 +1,43 @@
 // components/WaltSection.tsx
-import { useCallback } from "react"
+import { useCallback } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel";
 
 const slides = [
   {
     title: "WALT",
     subtitle: "Rental Habitats in the Heart of Dorval",
     tag: "NOW PRE-LEASING",
-    imageUrl: "https://thumbs.dreamstime.com/b/stylish-rooftop-terrace-sunset-modern-design-includes-outdoor-kitchen-lounge-area-plants-lighting-evening-ambiance-relaxing-417081729.jpg",
+    imageUrl:
+      "https://thumbs.dreamstime.com/b/stylish-rooftop-terrace-sunset-modern-design-includes-outdoor-kitchen-lounge-area-plants-lighting-evening-ambiance-relaxing-417081729.jpg",
   },
   {
     title: "WALT",
     subtitle: "Elevated Living with Panoramic Views",
     tag: "NOW PRE-LEASING",
-    imageUrl: "https://thumbs.dreamstime.com/b/serene-rooftop-terrace-lounge-chairs-city-skyline-sunset-tranquil-featuring-comfortable-surrounded-lush-greenery-379393482.jpg",
+    imageUrl:
+      "https://thumbs.dreamstime.com/b/serene-rooftop-terrace-lounge-chairs-city-skyline-sunset-tranquil-featuring-comfortable-surrounded-lush-greenery-379393482.jpg",
   },
   {
     title: "WALT",
     subtitle: "Modern Luxury Rooftop Retreats",
     tag: "NOW PRE-LEASING",
-    imageUrl: "https://thumbs.dreamstime.com/b/chic-city-rooftop-bar-sunset-panoramic-views-stylish-atmosphere-outdoor-cafe-tables-chairs-luxury-lounge-setting-sofas-385607171.jpg",
+    imageUrl:
+      "https://thumbs.dreamstime.com/b/chic-city-rooftop-bar-sunset-panoramic-views-stylish-atmosphere-outdoor-cafe-tables-chairs-luxury-lounge-setting-sofas-385607171.jpg",
   },
   {
     title: "WALT",
     subtitle: "Serene Oceanfront Elegance",
     tag: "NOW PRE-LEASING",
-    imageUrl: "https://thumbs.dreamstime.com/z/elegant-oceanfront-balcony-blooming-flowers-cozy-outdoor-sofa-set-golden-sunset-luxury-summer-lifestyle-luxurious-sea-376396904.jpg",
+    imageUrl:
+      "https://thumbs.dreamstime.com/z/elegant-oceanfront-balcony-blooming-flowers-cozy-outdoor-sofa-set-golden-sunset-luxury-summer-lifestyle-luxurious-sea-376396904.jpg",
   },
-]
+];
 
 export default function WaltSection() {
   return (
@@ -48,34 +52,42 @@ export default function WaltSection() {
         >
           <CarouselContent>
             {slides.map((slide, index) => (
-              <CarouselItem key={index} className="relative">
-                <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[16/9] md:aspect-[21/9] lg:aspect-[3/1] w-full group">
-                  {/* Background Image */}
-                  <img
-                    src={slide.imageUrl}
-                    alt={slide.title}
-                    className="absolute inset-0 w-full h-full object-cover brightness-[0.85] transition-transform duration-700 group-hover:scale-105"
-                    loading={index < 2 ? "eager" : "lazy"}
-                  />
-
-                  {/* Dark Overlay (stronger on left for text) */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-
-                  {/* Content - Left side card */}
-                  <div className="absolute inset-0 flex items-center">
-                    <div className="w-full max-w-md lg:max-w-lg pl-8 md:pl-12 lg:pl-16 pr-6 md:pr-12">
-                      <div className="bg-black/60 backdrop-blur-sm p-8 md:p-10 rounded-xl border border-white/10">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-                          {slide.title}
-                        </h2>
-                        <p className="mt-4 text-xl md:text-2xl text-white/90 font-light">
-                          {slide.subtitle}
-                        </p>
-                        <div className="mt-6 inline-block bg-primary/90 text-white px-6 py-3 rounded-md text-lg font-medium uppercase tracking-wider">
-                          {slide.tag}
-                        </div>
-                      </div>
+              <CarouselItem key={index}>
+                <div
+                  className={`
+                    grid grid-cols-1 md:grid-cols-10 
+                    overflow-hidden rounded-2xl shadow-2xl 
+                    bg-gray-900
+                    min-h-[200px] md:min-h-[300px] lg:min-h-[380px]
+                    group
+                  `}
+                >
+                  {/* Left: Content ≈ 30% */}
+                  <div className="md:col-span-3 bg-[#0e171e] backdrop-blur-sm flex flex-col justify-center text-center p-8 md:p-10 lg:p-12 order-1 md:order-1">
+                    <h2 className="text-6xl md:text-8xl lg:text-7xl font-black tracking-tight uppercase text-white font-['Bebas_Neue']">
+                      {slide.title}
+                    </h2>
+                    <p className="text-2x2 md:text-2x2 font-bold uppercase tracking-wide text-gray/90 mt-4 font-['Inter']">
+                      {slide.subtitle}
+                    </p>
+                    <div className="mt-6 inline-block bg-primary/90 text-white px-6 py-3 rounded-md text-md font-sarif uppercase tracking-wider">
+                      {slide.tag}
                     </div>
+                  </div>
+
+                  {/* Right: Image ≈ 70% */}
+                  <div className="md:col-span-7 relative overflow-hidden order-2 md:order-2">
+                    <img
+                      src={slide.imageUrl}
+                      alt={slide.title}
+                      className="
+                        absolute inset-0 w-full h-full 
+                        object-cover 
+                        transition-transform duration-700 
+                        group-hover:scale-105
+                      "
+                      loading={index < 2 ? "eager" : "lazy"}
+                    />
                   </div>
                 </div>
               </CarouselItem>
@@ -84,15 +96,24 @@ export default function WaltSection() {
 
           {/* Navigation Arrows only (no dots) */}
           <div className="hidden md:block">
-            <CarouselPrevious 
-              className="left-4 md:left-8 -translate-x-1/2 border-2 bg-background/70 backdrop-blur-md hover:bg-background text-white hover:text-primary border-white/30 hover:border-primary" 
+            <CarouselPrevious
+              className="
+                left-0 md:left-0 -translate-x-1/2 
+                bg-[#d0a235] backdrop-blur-md 
+                hover:bg-[#fed358] text-white border-none hover:text-black 
+                
+              "
             />
-            <CarouselNext 
-              className="right-4 md:right-8 translate-x-1/2 border-2 bg-background/70 backdrop-blur-md hover:bg-background text-white hover:text-primary border-white/30 hover:border-primary" 
+            <CarouselNext
+              className="
+                right-0 md:right-0 border-none translate-x-1/2 
+                bg-[#d0a235] backdrop-blur-md 
+                hover:bg-[#fed358] text-white hover:text-black 
+              "
             />
           </div>
         </Carousel>
       </div>
     </section>
-  )
+  );
 }

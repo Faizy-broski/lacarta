@@ -61,13 +61,10 @@ export default function NeighborhoodsSection() {
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-background">
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="mb-8 md:mb-12 text-center">
+        <div className="mb-8 md:mb-12 ">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             Neighborhoods
           </h2>
-          <p className="mt-3 text-muted-foreground md:text-lg">
-            Discover the most beautiful areas to explore
-          </p>
         </div>
 
         <Carousel
@@ -84,8 +81,8 @@ export default function NeighborhoodsSection() {
                 key={index}
                 className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
               >
-                <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-200">
+                <div className="group relative overflow-hidden rounded shadow-md hover:shadow-xl transition-all duration-300">
+                  <div className="relative aspect-[3/3.5] w-full overflow-hidden bg-gray-200">
                     <img
                       src={neighborhood.imageUrl}
                       alt={neighborhood.name}
@@ -96,7 +93,7 @@ export default function NeighborhoodsSection() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-                  <div className="absolute bottom-0  w-full text-center">
+                  <div className="absolute bottom-4 font-['Inter']  w-full text-center">
                     <h3 className="text-xl md:text-2xl font-semibold text-white drop-shadow-md">
                       {neighborhood.name}
                     </h3>

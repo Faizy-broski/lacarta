@@ -21,12 +21,13 @@ export default {
     extend: {
       fontFamily: {
         // This makes Times New Roman the default serif font
-        serif: ['"Times New Roman"', 'Moonscape','Times', 'serif'],
+        serif: ['"Times New Roman"','Inter', 'Moonscape','Times', 'serif'],
       },
       colors: {
         placeholderColor: {
-          light: "#e9e9e9",
+          light: "#e9e9e9",y : "#d0a235",
           text: "#33333",
+          r:"#af0501"
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

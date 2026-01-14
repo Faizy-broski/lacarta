@@ -38,18 +38,17 @@ export default function TopNewsCartagena() {
                   <div className='d-flex my-5 align-items-center'>
                    <div>
                      <span>Accomodation - Hotels</span>
-                    <h5 className="fw-bold my-2 text-black">the most luxurious hotel of cartagena</h5>
+                    <h5 className="fw-bold my-2 text-lg text-black">The Most Luxurious Hotel Of Cartagena</h5>
                     <span>3 Min Read</span>
                    </div>
                    <div>
                     <button className='btn fs-2 fw-bold'><i className="bi bi-arrow-right-circle text-[#d0a439] hover:text-[#b88f30]"></i></button>
                    </div>
                   </div>
-          
                    <div className='d-flex my-5 align-items-center'>
                    <div>
                      <span>Accomodation - Hotels</span>
-                    <h5 className="fw-bold my-2 text-black">Want To Exercise? The
+                    <h5 className="fw-bold my-2 text-lg text-black">Want To Exercise? The
 Best Spots For All Types
 Of Workouts</h5>
                     <span>3 Min Read</span>
@@ -62,9 +61,9 @@ Of Workouts</h5>
                    <div className='d-flex my-5 align-items-center'>
                    <div>
                      <span>Accomodation - Hotels</span>
-                    <h5 className="fw-bold my-2 text-black">the top 7
-instagrammable places of
-cartagena</h5>
+                    <h5 className="fw-bold my-2 text-lg text-black">The Top 7
+Instagrammable Places Of
+Cartagena</h5>
                     <span>3 Min Read</span>
                    </div>
                    <div>

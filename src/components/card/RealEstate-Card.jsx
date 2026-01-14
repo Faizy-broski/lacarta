@@ -15,19 +15,17 @@ export default function EstateCard({details = [],heading,columns}){
         <Card key={item.id} className="shadow relative overflow-hidden">
   {/* Heart icon (right) */}
   <Button
-  className="
-    absolute top-3 right-3
+  className="absolute right-2
+    top-2
     h-10 w-10
     rounded-full
-    bg-[#e5c0a9]
-    border border-white
+    bg-[#fed358]
     p-0
     flex items-center justify-center
     hover:bg-gray-500/30
-    transition
-  "
+    transition"
 >
-  <Heart className="h-5 w-5 font-bold fill-white text-white" />
+  <Heart className="h-5 w-5 font-bold fill-white text-black" />
 </Button>
         <img
         src={item.image}
@@ -36,6 +34,7 @@ export default function EstateCard({details = [],heading,columns}){
         />
         <CardHeader className="space-y-1">
         <h3 className="text-lg text-black font-bold">{item.title}</h3>
+        <h6 className="text-muted-foreground font-bold">Home for Rent</h6>
         <p className="text-sm flex gap-2 text-muted-foreground">
          <MapPin size={18}></MapPin>{item.location}
         </p>
@@ -47,22 +46,23 @@ export default function EstateCard({details = [],heading,columns}){
         </p>
         </CardHeader>
         <CardContent className="items-center justify-between">
-        <h5 className="text-bold text-black font-bold">Starting at ${item.price}<span className="text-muted-foreground">/month</span></h5>
-        <span className="text-sm my-2 text-black font-medium flex gap-2"><Star></Star>{item.rating}</span>
-        <Button  variant="outline"
+        <h5 className="text-bold text-muted-foreground font-bold">Starting at ${item.price}<span className="text-muted-foreground">/month</span></h5>
+        <span className="text-sm my-2 text-muted-foreground font-medium flex gap-5"><span><Star className="text-black"></Star></span>{item.rating}</span>
+        <Button  variant="outline" 
           size="sm"
           className="
-            border-0 
+            border-0
             w-full
             border
             bg-transparent 
-            text-[#23c55e] 
+            text-black
             font-extrabold
             underline 
             underline-offset-4
             decoration-[#23c55e]
             hover:text-[#4bd87d]
-            hover:decoration-[#4bd87d]">
+            hover:decoration-[#4bd87d]"
+            >
                 SEE THIS PROJECT
                 </Button>
         </CardContent>

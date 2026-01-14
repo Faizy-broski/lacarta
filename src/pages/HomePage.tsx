@@ -58,11 +58,17 @@ const HomePage = () => {
       >
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-7xl font-moonscape font-black leading-tight mb-8">
-            EVERYTHING <br /> CARTAGENA
-          </h1>
+          <h1 className="
+  text-6xl md:text-7xl lg:text-8xl
+  font-['Bebas_Neue'] font-normal
+  leading-none tracking-[-0.08em]
+  mb-[100px] uppercase text-white
+ 
+">
+  EVERYTHING <br /> CARTAGENA
+</h1>
 
-          <nav className="lg:flex hidden flex-wrap justify-center gap-3 mb-10">
+          <nav className="lg:flex hidden flex-wrap justify-center gap-1 mt- mb-2">
             {[
               "Beaches",
               "Accommodations",
@@ -74,20 +80,20 @@ const HomePage = () => {
               <Link
                 key={tag}
                 to="#"
-                className="bg-white text-black px-4 py-2 text-sm font-bold rounded-sm hover:bg-gray-200"
+                className="bg-white text-black px-4 py-2 font-bold shadow-lg rounded hover:bg-gray-200"
               >
                 {tag}
               </Link>
             ))}
           </nav>
 
-          <div className="flex max-w-2xl mx-auto bg-white rounded-md overflow-hidden p-1">
+          <div className="flex max-w-3xl mx-auto bg-white rounded overflow-hidden p-1">
             <input
-              className="flex-grow p-2 text-black outline-none"
+              className="flex-grow p-2 bg-white text-black outline-none"
               type="text"
               placeholder="Search for Anything"
             />
-            <Button className="text-white my-auto px-6 py-2 font-bold bg-[#d0a439] hover:bg-[#b88f30] transition-colors">
+            <Button className="text-white w-[250px] my-auto rounded px-6 py-2 font-bold bg-[#d0a439] hover:bg-[#b88f30] transition-colors">
               Search
             </Button>
           </div>
@@ -114,7 +120,7 @@ const HomePage = () => {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="relative group overflow-hidden cursor-pointer"
+              className="relative rounded group overflow-hidden cursor-pointer"
             >
               <div
                 className={`absolute top-0 left-0 w-full p-2 text-white font-bold fs-5 text-center z-10 bg-gradient-to-r ${item.color}`}
@@ -210,17 +216,17 @@ const HomePage = () => {
           <div className="grid grid-cols-2 items-center gap-16">
             {/* LEFT CONTENT */}
             <div className="max-w-xl">
-              <h2 className="text-5xl font-serif font-extrabold leading-tight mb-6 text-black">
+              <h2 className="text-5xl font-[Bebas_Neue] leading-tight tracking-[-0.04em] font-semibold uppercase mb-6 text-black">
                 How to thrive in Cartagena, Colombia like a local.
               </h2>
 
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Hidden gems, staying safe, maneuvering around the city, watching
-                out for scams, negotiating, what to pack. The ultimate guide for
+              <p className="text-lg text-black font-semibold mb-8 leading-relaxed">
+                Hidden Gems, Staying Safe, Maneuvering Around The City, Watching
+                Out For Scams, Negotiating, What To Pack. The Ultimate Guide For
                 Gringos.
               </p>
 
-              <Button className="px-6 py-3 text-white font-semibold rounded-lg 
+              <Button className="px-6 py-3 text-white w-full font-bold rounded 
 bg-gradient-to-r from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A] hover:brightness-110
 transition">
                 <a href="https://lacarta.co/cartagena/resources/">
@@ -282,7 +288,7 @@ transition">
              flex flex-col h-auto"
 >
   <div
-    className={`absolute -top-8 left-1/2 -translate-x-1/2 
+    className={`absolute -top-8 left-1/2  -translate-x-1/2 
               w-14 h-14 flex items-center border-4 border-white justify-center
               rounded-full text-white shadow-lg bg-gradient-to-r ${tool.color}`}
   >

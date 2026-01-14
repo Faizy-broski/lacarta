@@ -76,7 +76,7 @@ export default function HowToDoCartagena() {
           {/* Badge */}
           <Badge
             className={`absolute top-0 right-1 px-3 py-2 
-                        text-white rounded-none border-0 ${card.color}`}
+                        text-white rounded border-0 ${card.color}`}
           >
             {card.category}
           </Badge>
@@ -100,7 +100,7 @@ export default function HowToDoCartagena() {
         </CardContent>
 
         {/* Footer stays at bottom */}
-        <CardFooter className="p-4 flex items-center gap-2">
+        <CardFooter className="px-4 flex items-center gap-2">
           <Avatar className="h-8 w-8">
             <AvatarImage src="/images/avatar.png" />
             <AvatarFallback>
