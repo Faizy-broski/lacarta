@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import {
@@ -22,31 +23,21 @@ import {
   PawPrint,
   Mountain,
 } from "lucide-react"
+import PlayaScondidaCard from "./per-item-detail";
+import PlayaScondidaAbout from "./detailed-content";
 
 
-export default function ProjectDetailsPage({ project }) {
-  const [activeImage, setActiveImage] = useState(0);
+export default function DetailedPage({ project }) {
+  // const [activeImage, setActiveImage] = useState(0);
 
   return (
-    <div className="bg-[#f7f7f7] px-5">
+    <div className="bg-[#f7f7f7] px-5 py-5">
       <div className="mx-auto max-w-7xl md:px-4">
-        <div className="mx-auto my-5 max-w-7xl px-4 text-center">
-          <h1 className="text-3xl md:text-6xl font-moonscape font-black leading-tight text-black mb-8 mt-2">
-            Complete guide of all Gastronomy projects in Lacarta.
-          </h1>
-          <div className="flex max-w-2xl gap-1 mx-auto bg-white overflow-hidden p-1">
-            <input
-              className="flex-grow p-2 text-black border rounded-full"
-              type="email"
-              placeholder="Where/What you are Looking For"
-            />
-            <Button className="text-white my-auto rounded-full px-6 py-2 font-bold bg-[#d0a439] hover:bg-[#b88f30] transition-colors">
-              Seacrh
-            </Button>
-          </div>
-        </div>
         {/* HEADER */}
-        <Card className="mb-8 shadow">
+         La Carta - Cartagena Culture & Tourism &rsaquo; Accommodations &rsaquo; Glamping/Nature &rsaquo; Playa Scondida
+        <PlayaScondidaCard />
+        <PlayaScondidaAbout />
+        {/* <Card className="mb-8 shadow">
           <CardHeader className="space-y-2">
             <div className="flex items-center gap-2">
               <h1 className="fs-2 text-black font-bold">{project.title}</h1>
@@ -65,7 +56,7 @@ export default function ProjectDetailsPage({ project }) {
             ))}
           </CardHeader>
 
-          {/* IMAGE GALLERY */}
+      
           <div className="relative w-full h-[260px] overflow-hidden">
             <img
               src={project.images[activeImage]}
@@ -73,7 +64,7 @@ export default function ProjectDetailsPage({ project }) {
               alt="project"
             />
 
-            {/* Arrows */}
+           
             <button
               onClick={() =>
                 setActiveImage((prev) =>
@@ -96,7 +87,7 @@ export default function ProjectDetailsPage({ project }) {
             </button>
           </div>
 
-          {/* THUMBNAILS */}
+          
 <div className="flex gap-2 p-4 overflow-x-auto pb-2">
   {project.images.map((img, index) => (
     <div 
@@ -117,7 +108,7 @@ export default function ProjectDetailsPage({ project }) {
     </div>
   ))}
 </div>
-        </Card>
+        </Card> */}
 
 {/* Main Content */}
 
