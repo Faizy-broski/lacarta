@@ -3,7 +3,63 @@ import img2 from '../assets/img12.png'
 import img3 from '../assets/img13.png'
 import img4 from '../assets/img33.png'
 
-export const projectData = {
+export const boatingData = {
+
+ places : [
+  {
+    title: "Marina del Rey",
+    image: img3,
+    tags: ["Restaurant", "Waterfront"],
+  },
+  {
+    title: "Playa Blanca Resort",
+    image: img3,
+    tags: ["Beach", "Luxury"],
+  },
+  {
+    title: "La Cabaña Glamping Geronimo",
+    image: img3,
+    tags: ["Glamping", "Eco-Lodge"],
+  },
+  {
+    title: "Cholon Beach Club",
+    image: img3,
+    tags: ["Beach", "Nightlife"],
+  },
+],
+premiumListings: [
+    {
+      id: 1,
+      title: "La Brioche Royal",
+      subtitle: "Best French Breakfast",
+      image: img3,
+      rating: 4.8,
+    },{
+      id: 1,
+      title: "La Brioche Royal",
+      subtitle: "Best French Breakfast",
+      image: img3,
+      rating: 4.8,
+    },
+    {
+      id: 1,
+      title: "La Brioche Royal",
+      subtitle: "Best French Breakfast",
+      image: img3,
+      rating: 4.8,
+    },
+    {
+      id: 1,
+      title: "La Brioche Royal",
+      subtitle: "Best French Breakfast",
+      image: img3,
+      rating: 4.8,
+    },
+  ]
+
+
+,
+
  title: "Italian",
   rating: 4.9,
   reviews: 528,

@@ -7,7 +7,13 @@ import Beaches from "@/pages/Beaches";
 import Boating from "@/pages/Boating";
 import RealEstate from "@/pages/RealEstate";
 import Layout from "@/components/layout/Layout";
-import ProjectDetails from "@/pages/DetailsPage";
+
+import DetailedActivity from "@/pages/Detailed-Activity";
+import DetailedBeach from "@/pages/Detailed-Beach";
+import DetailedHotel from "@/pages/Detailed-Hotel";
+import DetailedBoating from "@/pages/Detailed-Boating";
+import DetailedGastronomy from "@/pages/Detailed-Gyst";
+
 import RealestatePage from "@/pages/Real-Estate-Page";
 
 import { Toaster } from "@/components/ui/toaster";
@@ -32,7 +38,7 @@ function App() {
             }
           />
            <Route
-            path="/activities"
+            path="/Activities"
             element={
               <Layout>
                 <Activities />
@@ -48,7 +54,7 @@ function App() {
             }
           />
            <Route
-            path="/gastronomy"
+            path="/Gastronomy"
             element={
               <Layout>
                 <Gastronomy />
@@ -56,7 +62,7 @@ function App() {
             }
           />
            <Route
-            path="/beaches"
+            path="/Beaches"
             element={
               <Layout>
                 <Beaches />
@@ -64,7 +70,7 @@ function App() {
             }
           />
            <Route
-            path="/boating"
+            path="/Boating"
             element={
               <Layout>
                 <Boating />
@@ -72,26 +78,59 @@ function App() {
             }
           />
            <Route
-            path="/"
+            path="/realState"
             element={
               <Layout>
                 <RealEstate />
               </Layout>
             }
           />
+        
           <Route
-            path="/projectDetails"
+            path="/real-Estate-detailed"
             element={
               <Layout>
-                <ProjectDetails />
+                <RealestatePage />
               </Layout>
             }
           />
           <Route
-            path="/real-Estate"
+            path="/Detailed-Boating"
             element={
               <Layout>
-                <RealestatePage />
+                <DetailedBoating/>
+              </Layout>
+            }
+          />
+          <Route
+            path="/Detailed-Activity"
+            element={
+              <Layout>
+                <DetailedActivity />
+              </Layout>
+            }
+          />
+          <Route
+            path="/Detailed-Beach"
+            element={
+              <Layout>
+                <DetailedBeach />
+              </Layout>
+            }
+          />
+          <Route
+            path="/Detailed-Hotel"
+            element={
+              <Layout>
+                <DetailedHotel />
+              </Layout>
+            }
+          />
+          <Route
+            path="/Detailed-Gastronomy"
+            element={
+              <Layout>
+                <DetailedGastronomy />
               </Layout>
             }
           />
