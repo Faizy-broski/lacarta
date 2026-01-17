@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate"
 
 export default {
   darkMode: ["class"],
@@ -20,15 +21,16 @@ export default {
     extend: {
       fontFamily: {
         // This makes Times New Roman the default serif font
-        serif: ['"Times New Roman"', 'Moonscape','Times', 'serif'],
+        serif: ['"Times New Roman"','Inter', 'Moonscape','Times', 'serif'],
       },
       colors: {
         greenStart: "#3BCF8E",
         greenMid: "#2EB872",
         greenEnd: "#1E9E5A",
         placeholderColor: {
-          light: "#e9e9e9",
+          light: "#e9e9e9",y : "#d0a235",
           text: "#33333",
+          r:"#af0501"
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -119,5 +121,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;
