@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     { label: "Hotels", path: "/hotels" },
     { label: "Beaches", path: "/beaches" },
     { label: "Boating", path: "/boating" },
-    { label: "Tours", path: "/tours" },
+    { label: "Real Estate", path: "/realState" },
     { label: "Gastronomy", path: "/gastronomy" },
   ];
   const FooterNavLinks = [
@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
     { label: "Beach Trips", path: "/beaches" },
     { label: "Rentals", path: "/" },
     { label: "Medical", path: "/" },
-    { label: "Real Estate", path: "/" },
+    { label: "Real Estate", path: "/realState" },
     { label: "More", path: "/" },
   ];
 
