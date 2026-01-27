@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
     { label: "Beach Trips", path: "/beaches" },
     { label: "Rentals", path: "/" },
     { label: "Medical", path: "/" },
-    { label: "Real Estate", path: "/realState" },
+    { label: "Real Estate", path: "/" },
     { label: "More", path: "/" },
   ];
 
