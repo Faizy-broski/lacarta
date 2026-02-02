@@ -19,8 +19,12 @@ const Card = ({ image, category, title, author, time, className = "" }) => (
         {title}
       </div>
 
-      <div className="bg-red-600 text-white relative w-100 left-9 bottom-3  w-100 text-xs flex items-center px-3 py-2">
-        <span>{author}</span>
+      <div className="bg-gradient-to-r from-red-700 via-red-850 to-red-700 text-white relative w-100 left-9 bottom-3  w-100 text-xs flex items-center px-3 py-2">
+       <div className="flex items-center gap-3"><div><img
+      src={image}
+      className="absolute inset-0 w-7 h-7 rounded-full object-cover transition-transform duration-500 group-hover:scale-105"
+      alt=""
+    /></div> <div><span>{author}</span></div></div>
         <span className="ml-auto opacity-80">{time}</span>
       </div>
     </div>

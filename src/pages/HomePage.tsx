@@ -78,7 +78,8 @@ const HomePage = () => {
           >
             EVERYTHING <br /> CARTAGENA
           </h1>
-
+          
+          <div>
           <nav className="lg:flex hidden flex-wrap justify-center gap-1 mt- mb-2">
             {[
               "Beaches",
@@ -97,8 +98,9 @@ const HomePage = () => {
               </Link>
             ))}
           </nav>
+          </div>
 
-          <div className="flex max-w-3xl mx-auto bg-white rounded overflow-hidden p-1">
+          <div className="flex max-w-3xl mx-auto bg-whie rounded overflow-hidden p-1">
             <input
               className="flex-grow p-2 bg-white text-black outline-none"
               type="text"
@@ -113,14 +115,14 @@ const HomePage = () => {
 
       {/* Section Title */}
       <div className="py-12 px-10 md:px-16 text-center">
-        <h2 className="text-3xl md:text-4xl font-black text-black text-center uppercase mb-16">
+        <h2 className="text-3xl md:text-4xl font-black text-black text-center uppercase">
           What to do in Cartagena, Colombia
         </h2>
       </div>
 
       {/* Category Grid */}
       <div className="container mx-auto pb-20 px-10 md:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {[
             {
               label: "Hotels",
@@ -162,7 +164,7 @@ const HomePage = () => {
             <Link
               key={idx}
               to={item.href}
-              className="relative rounded group overflow-hidden cursor-pointer"
+              className="relative group overflow-hidden cursor-pointer"
             >
               <div
                 className={`absolute top-0 left-0 w-full p-2 text-white font-bold fs-5 text-center z-10 bg-gradient-to-r ${item.color}`}
@@ -188,7 +190,7 @@ const HomePage = () => {
       </div>
 
       <section className="container mb-5 mx-auto pb-13 px-10 md:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[260px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 auto-rows-[260px]">
           {/* Beaches – Tall */}
           <Card
             image={beachpic}
@@ -259,7 +261,7 @@ const HomePage = () => {
           <div className="grid grid-cols-2 items-center gap-16">
             {/* LEFT CONTENT */}
             <div className="max-w-xl">
-              <h2 className="text-5xl font-[Bebas_Neue] leading-tight tracking-[-0.04em] font-semibold uppercase mb-6 text-black">
+              <h2 className="text-3xl md:text-4xl font-black text-black uppercase mb-16">
                 How to thrive in Cartagena, Colombia like a local.
               </h2>
 
@@ -271,7 +273,7 @@ const HomePage = () => {
 
               <Button
                 className="px-6 py-3 text-white w-full font-bold rounded 
-bg-gradient-to-r from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A] hover:brightness-110
+bg-gradient-to-r from-green-500  via-green-600 to-green-800 hover:brightness-110
 transition"
               >
                 <a href="https://lacarta.co/cartagena/resources/">
