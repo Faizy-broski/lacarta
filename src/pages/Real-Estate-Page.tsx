@@ -21,7 +21,7 @@ import EstateThemes from "../components/real-estate/EstateThemes";
 import Neighborhoods from "../components/real-estate/scroll-Images";
 import WaltSection from "../components/real-estate/Walt-Slider";
 import EstateCard from "@/components/card/RealEstate-Card";
-import { realEsteteData } from "@/data/real-estate-page.data";
+import { realEsteteData } from "@/data/real-estate-page";
 
 export default function RealestatePage() {
   return (

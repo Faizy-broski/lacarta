@@ -1,5 +1,5 @@
 import DetailedPage from "@/components/detail/detailsPage";
-import { activityData } from "@/data/detailed-activity.data";
+import { activityData } from "@/data/detailed-activity";
 import AroundThisPlace from "../components/card/DetailedPageCard";
 import HomeArea from "../components/HomeInArea";
 import FaqSection from "@/components/detail/faq-Section";

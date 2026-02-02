@@ -1,5 +1,5 @@
 import DetailedPage from "@/components/detail/detailsPage";
-import { beachData } from "@/data/detailed-beach.data";
+import { beachData } from "@/data/detailed-beach";
 import AroundThisPlace from "../components/card/DetailedPageCard";
 import HomeArea from "../components/HomeInArea";
 // import PaginationListing from "@/components/listings/PaginationListing";

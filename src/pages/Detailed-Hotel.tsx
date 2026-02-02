@@ -1,5 +1,5 @@
 import DetailedPage from "@/components/detail/detailsPage";
-import { hotelData } from "@/data/detailed-hotel.data";
+import { hotelData } from "@/data/detailed-hotel";
 import AroundThisPlace from "../components/card/DetailedPageCard";
 import HomeArea from "../components/HomeInArea";
 import FaqSection from "@/components/detail/faq-Section";
