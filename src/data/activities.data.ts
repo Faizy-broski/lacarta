@@ -46,6 +46,41 @@ export const activitiesData = {
     },
   ],
 
+  eliteListings: [
+    {
+      id: 1,
+      title: "La Brioche Royal",
+      subtitle: "Best French Breakfast",
+      image: img3,
+      rating: 4.8,
+      href: "/elite",
+    },
+    {
+      id: 1,
+      title: "La Brioche Royal",
+      subtitle: "Best French Breakfast",
+      image: img3,
+      rating: 4.8,
+      href: "/elite",
+    },
+    {
+      id: 1,
+      title: "La Brioche Royal",
+      subtitle: "Best French Breakfast",
+      image: img3,
+      rating: 4.8,
+      href: "/elite",
+    },
+    {
+      id: 1,
+      title: "La Brioche Royal",
+      subtitle: "Best French Breakfast",
+      image: img3,
+      rating: 4.8,
+      href: "/elite",
+    },
+  ],
+
   categories: [
     {
       id: 7,

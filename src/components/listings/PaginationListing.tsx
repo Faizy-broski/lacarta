@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-export default function PaginationListing({ premiumListings = [] }) {
+export default function PaginationListing({ premiumListings = [], text = 'Premium Listing' }) {
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
-      <h2 className="mb-8 text-4xl text-black font-bold">Premium Listing</h2>
+      <h2 className="mb-8 text-4xl text-black font-bold">{text}</h2>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {premiumListings.map((item) => (
