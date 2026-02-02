@@ -35,14 +35,15 @@ export const realEsteteData = {
   details: [
       {
         id: 1,
-        title: "Luxury Yacht Charter",
+        title: "Yacht Charter",
         subtitle: "Private Day Cruises",
         image: img3,
         noOfBed:3,
         noOfBath:2,
         location:"United Estate",
         rating: 4.9,
-        price : 1175
+        price : 1175,
+        href: '/real-Estate-listing'
       },
       {
         id: 2,
@@ -53,7 +54,8 @@ export const realEsteteData = {
         noOfBath:2,
         location:"United Estate",
         rating: 4.8,
-        price : 1175
+        price : 1175,
+        href: '/real-Estate-listing'
       },
       {
         id: 3,
@@ -64,7 +66,8 @@ export const realEsteteData = {
         noOfBath:2,
         location:"United Estate",
         rating: 4.7,
-        price : 1175
+        price : 1175,
+        href: '/real-Estate-listing'
       },
       {
         id: 4,
@@ -75,7 +78,8 @@ export const realEsteteData = {
         noOfBath:2,
         location:"United Estate",
         rating: 4.6,
-        price : 1175
+        price : 1175,
+        href: '/real-Estate-listing'
       },
       {
         id: 4,
@@ -86,7 +90,8 @@ export const realEsteteData = {
         noOfBath:2,
         location:"United Estate",
         rating: 4.6,
-        price : 1175
+        price : 1175,
+        href: '/real-Estate-listing'
       },
       {
         id: 4,
@@ -97,7 +102,8 @@ export const realEsteteData = {
         noOfBath:2,
         location:"United Estate",
         rating: 4.6,
-        price : 1175
+        price : 1175,
+        href: '/real-Estate-listing'
       },
       {
         id: 4,
@@ -108,7 +114,8 @@ export const realEsteteData = {
         noOfBath:2,
         location:"United Estate",
         rating: 4.6,
-        price : 1175
+        price : 1175,
+        href: '/real-Estate-listing'
       },
       {
         id: 4,
@@ -119,7 +126,8 @@ export const realEsteteData = {
         noOfBath:2,
         location:"United Estate",
         rating: 4.6,
-        price : 1175
+        price : 1175,
+        href: '/real-Estate-listing'
       },
       {
         id: 4,
@@ -130,7 +138,8 @@ export const realEsteteData = {
         noOfBath:2,
         location:"United Estate",
         rating: 4.6,
-        price : 1175
+        price : 1175,
+        href: '/real-Estate-listing'
       },
     ],
 }

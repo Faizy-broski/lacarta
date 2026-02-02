@@ -5,7 +5,7 @@ import ProjectDetails from "./components/ProjectDetails"
 import ContactFormCard from "./components/ContactFormCard"
 import EstateHero from "./components/estatehero";
 import EstateCard from './../../components/card/RealEstate-Card';
-import { realEsteteData } from './../../data/real-estate-page.data';
+import { realEsteteData } from '@/data/real-estate-page.data';
 import HomeArea from './../../components/HomeInArea';
 
 
