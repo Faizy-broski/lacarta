@@ -3,7 +3,6 @@ import { boatingData } from "@/data/detailed-boating.data";
 import AroundThisPlace from "../components/card/DetailedPageCard";
 import HomeArea from "../components/HomeInArea";
 import FaqSection from "@/components/detail/faq-Section";
-import PaginationListing from "@/components/listings/PaginationListing";
 import PlayaScondidaCard from "@/components/detail/per-item-detail";
 import PlayaScondidaAbout from "@/components/detail/detailed-content";
 import KeyFeatures from "@/components/detail/key-Feature";
@@ -19,7 +18,6 @@ export default function DetailedBoating() {
     <div className="bg-[#f7f7f7] px-1 py-3 md:py-5 md:px-5">
       <div className="mx-auto max-w-7xl md:px-4">
       <PlayaScondidaCard />
-      <PaginationListing {...boatingData}></PaginationListing>
       <PlayaScondidaAbout />
       <HomeArea />
       <KeyFeatures />
