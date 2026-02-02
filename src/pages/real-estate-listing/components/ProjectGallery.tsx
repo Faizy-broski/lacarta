@@ -1,6 +1,6 @@
 // components/project/ProjectGallery.tsx
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import img from "../../../assets/Fish.png";
+import img from "/assets/Fish.png";
 
 export default function ProjectGallery() {
   return (

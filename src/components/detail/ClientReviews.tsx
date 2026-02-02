@@ -1,20 +1,20 @@
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Star } from "lucide-react"
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
 
 type Review = {
-  name: string
-  location: string
-  rating: number
-  text: string
-  avatar: string
-}
+  name: string;
+  location: string;
+  rating: number;
+  text: string;
+  avatar: string;
+};
 
 type Props = {
-  eyebrow: string
-  title: string
-  reviews: Review[]
-}
+  // eyebrow: string;
+  title: string;
+  cReviews: Review[];
+};
 
 function Stars({ rating }: { rating: number }) {
   return (
@@ -23,37 +23,30 @@ function Stars({ rating }: { rating: number }) {
         <Star
           key={i}
           className={`h-4 w-4 ${
-            i < rating
-              ? "fill-amber-400 text-amber-400"
-              : "text-gray-300"
+            i < rating ? "fill-amber-400 text-amber-400" : "text-gray-300"
           }`}
         />
       ))}
     </div>
-  )
+  );
 }
 
-export default function ClientReviews({
-  eyebrow,
-  title,
-  reviews,
-}: Props) {
+// export default function ClientReviews({ eyebrow, title, cReviews }: Props) {
+export default function ClientReviews({ title, cReviews }: Props) {
   return (
     <section className="bg-[#fbf8f2] py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="mb-2 text-xs uppercase tracking-widest text-gray-500">
+          {/* <p className="mb-2 text-xs uppercase tracking-widest text-gray-500">
             {eyebrow}
-          </p>
-          <h2 className="text-3xl font-bold text-gray-900">
-            {title}
-          </h2>
+          </p> */}
+          <h2 className="text-3xl font-bold text-gray-900">{title}</h2>
         </div>
 
         {/* Reviews */}
         <div className="mx-auto max-w-4xl space-y-6">
-          {reviews.map((review, i) => (
+          {cReviews.map((review, i) => (
             <Card
               key={i}
               className="rounded-xl border border-amber-100 bg-white p-6 shadow-sm"
@@ -61,9 +54,7 @@ export default function ClientReviews({
               {/* Top */}
               <div className="mb-3 flex items-start justify-between">
                 <div>
-                  <h4 className="font-bold text-gray-900">
-                    {review.name}
-                  </h4>
+                  <h4 className="font-bold text-gray-900">{review.name}</h4>
                   <p className="text-xs font-bold text-gray-500">
                     {review.location}
                   </p>
@@ -103,5 +94,5 @@ export default function ClientReviews({
         </div>
       </div>
     </section>
-  )
+  );
 }

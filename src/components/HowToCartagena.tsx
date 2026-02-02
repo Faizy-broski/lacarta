@@ -6,10 +6,10 @@ import {
 } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-// import img7 from "../assets/Six-C-img1.png";
-// import img8 from "../assets/Six-C-img2.png";
-// import img9 from "../assets/Six-C-img3.png";
-// import img0 from "../assets/Six-C-img4.png";
+// import img7 from "/assets/Six-C-img1.png";
+// import img8 from "/assets/Six-C-img2.png";
+// import img9 from "/assets/Six-C-img3.png";
+// import img0 from "/assets/Six-C-img4.png";
 
 const cards = [
   {

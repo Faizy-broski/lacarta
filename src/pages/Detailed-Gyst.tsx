@@ -9,31 +9,29 @@ import KeyFeatures from "@/components/detail/key-Feature";
 import ServicesAmenities from "@/components/detail/services-Amenities";
 import ContactBooking from "@/components/detail/contact-Booking";
 import CartagenaNews from "@/components/layout/cartagenaNews";
- import ClientReviews from "@/components/detail/ClientReviews"
+import ClientReviews from "@/components/detail/ClientReviews";
 // import { reviewsData } from '@/data/reviews';
-
 
 export default function DetailedGastronomy() {
   // console.log("....................", projectData.details)
   return (
     <>
-    <div className="bg-[#f7f7f7] px-1 py-3 md:py-5 md:px-5">
-      <div className="mx-auto max-w-7xl md:px-4">
-      <PlayaScondidaCard />
-      <PlayaScondidaAbout />
-      {/* <HomeArea /> */}
-      <KeyFeatures />
-      <ServicesAmenities />
-      <ContactBooking />
-      <AroundThisPlace  {...gastronomyData}/>
-      </div></div>
+      <div className="bg-[#f7f7f7] px-1 py-3 md:py-5 md:px-5">
+        <div className="mx-auto max-w-7xl md:px-4">
+          <PlayaScondidaCard />
+          <PlayaScondidaAbout />
+          {/* <HomeArea /> */}
+          <KeyFeatures />
+          <ServicesAmenities />
+          <ContactBooking />
+          <AroundThisPlace {...gastronomyData} />
+        </div>
+      </div>
       <FaqSection />
-     
 
-<ClientReviews {...gastronomyData.reviewsData} />
+      <ClientReviews {...gastronomyData} />
 
       <CartagenaNews />
-
-  </>
-  )
+    </>
+  );
 }

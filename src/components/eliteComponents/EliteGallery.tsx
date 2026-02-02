@@ -1,5 +1,5 @@
 import { Image } from "@/components/ui/image"
-import img from '../../assets/activitiesHero.png'
+import img from '/assets/activitiesHero.png'
 
 
 const featured = {

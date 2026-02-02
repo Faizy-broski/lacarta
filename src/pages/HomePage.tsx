@@ -1,18 +1,18 @@
 import React from "react";
-import logo from "../assets/Logo.png.png";
-import img1 from "../assets/img1.png";
-import img2 from "../assets/img2.png";
-import img3 from "../assets/img33.png";
-import img4 from "../assets/4.png";
-import img5 from "../assets/img5.png";
-import img6 from "../assets/img6.png";
-import carpic from "../assets/car.png";
-import girlpic from "../assets/girl.png";
-import beachpic from "../assets/beach.png";
-import shippic from "../assets/ship.png";
-import artpic from "../assets/art.png";
-import resturantpic from "../assets/resturant.png";
-import hotelpic from "../assets/hotels.png";
+import logo from "/assets/Logo.png.png";
+import img1 from "/assets/img1.png";
+import img2 from "/assets/img2.png";
+import img3 from "/assets/img33.png";
+import img4 from "/assets/4.png";
+import img5 from "/assets/img5.png";
+import img6 from "/assets/img6.png";
+import carpic from "/assets/car.png";
+import girlpic from "/assets/girl.png";
+import beachpic from "/assets/beach.png";
+import shippic from "/assets/ship.png";
+import artpic from "/assets/art.png";
+import resturantpic from "/assets/resturant.png";
+import hotelpic from "/assets/hotels.png";
 
 import Card from "@/components/card/Card";
 import CircleCard from "@/components/card/CircularCard";
@@ -63,19 +63,11 @@ const HomePage = () => {
       {/* Hero Section */}
       <div
         className="relative bg-cover bg-center py-24 md:py-40"
-        style={{ backgroundImage: `url('/src/assets/Hero.png')` }}
+        style={{ backgroundImage: `url('/assets/Hero.png')` }}
       >
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1
-            className="
-  text-6xl md:text-7xl lg:text-8xl
-  font-['Bebas_Neue'] font-normal
-  leading-none tracking-[-0.08em]
-  mb-[100px] uppercase text-white
- 
-"
-          >
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-['Bebas_Neue'] font-normal leading-none tracking-[-0.08em] mb-[100px] uppercase text-white">
             EVERYTHING <br /> CARTAGENA
           </h1>
 
@@ -269,11 +261,7 @@ const HomePage = () => {
                 Gringos.
               </p>
 
-              <Button
-                className="px-6 py-3 text-white w-full font-bold rounded 
-bg-gradient-to-r from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A] hover:brightness-110
-transition"
-              >
+              <Button className="px-6 py-3 text-white w-full font-bold rounded bg-gradient-to-r from-[#3BCF8E] via-[#2EB872] to-[#1E9E5A] hover:brightness-110 transition">
                 <a href="https://lacarta.co/cartagena/resources/">
                   https://lacarta.co/cartagena/resources/
                 </a>

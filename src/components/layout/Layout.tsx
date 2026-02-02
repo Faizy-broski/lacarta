@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/Logo.png.png";
+import logo from "/assets/Logo.png.png";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {

@@ -1,9 +1,32 @@
-import img1 from "../assets/img11.png";
-import img2 from "../assets/img12.png";
-import img3 from "../assets/img13.png";
-import img4 from "../assets/img33.png";
+import img1 from "/assets/img11.png";
+import img2 from "/assets/img12.png";
+import img3 from "/assets/img13.png";
+import img4 from "/assets/img33.png";
 
 export const gastronomyData = {
+  cReviews: [
+    {
+      name: "El Gordo",
+      location: "Saint-Lambert",
+      rating: 4,
+      text: `Another wonderful evening at my favorite local home! It is unpleasantly cold out; however, this did not stop me from heading out to Mexico in the heart of Saint-Lambert. Despite this, it was packed and the staff were on top of their game (as usual). The quesadillas were on point and the sopa tortilla... oh ♥️! I thank you all for such an amazing experience each time and thank you for offering me a glass of wine. So sweet! I am humbled. 🖤`,
+      avatar: "/avatar.png",
+    },
+    {
+      name: "El Gordo",
+      location: "Saint-Lambert",
+      rating: 4,
+      text: `Another wonderful evening at my favorite local home! It is unpleasantly cold out; however, this did not stop me from heading out to Mexico in the heart of Saint-Lambert...`,
+      avatar: "/avatar.png",
+    },
+    {
+      name: "El Gordo",
+      location: "Saint-Lambert",
+      rating: 4,
+      text: `Another wonderful evening at my favorite local home! It is unpleasantly cold out; however, this did not stop me from heading out to Mexico in the heart of Saint-Lambert...`,
+      avatar: "/avatar.png",
+    },
+  ],
   places: [
     {
       title: "Marina del Rey",

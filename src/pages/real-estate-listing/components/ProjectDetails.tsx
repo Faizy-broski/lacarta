@@ -1,6 +1,6 @@
 // components/project/ProjectDetails.tsx
 import ProjectFeatures from "./ProjectFeatures"
-import img from "../../../assets/Fish.png";
+import img from "/assets/Fish.png";
 
 
 export default function ProjectDetails() {
