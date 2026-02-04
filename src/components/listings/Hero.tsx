@@ -14,7 +14,7 @@ export default function Hero(
             <h5 className="mt-4 fw-bold text-lg text-white/90">
 {path}
 </h5>
-          <h1 className="text-4xl md:text-6xl font-moonscape font-black leading-tight mb-8 mt-2">
+          <h1 className="text-4xl md:text-6xl font-serif shadow font-black leading-tight mb-8 mt-2">
             {title}
           </h1>
           <p className="my-4 fw-bold text-white/90">

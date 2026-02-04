@@ -21,6 +21,8 @@ export default {
     extend: {
       fontFamily: {
         // This makes Times New Roman the default serif font
+        luxury: ['Cinzel', 'serif'],
+         sans: ['Inter', 'sans-serif'],
         serif: ['"Times New Roman"','Inter', 'Moonscape','Times', 'serif'],
       },
       colors: {
