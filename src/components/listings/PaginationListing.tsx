@@ -1,7 +1,6 @@
 import React from "react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Star, Heart } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Star, Heart,ChevronRight,ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -9,74 +8,126 @@ export default function PaginationListing({
   premiumListings = [],
   text = "Premium Listing",
 }) {
+
+  // Split listings into groups of 4
+  const chunkSize = 4;
+  const slides = [];
+  for (let i = 0; i < premiumListings.length; i += chunkSize) {
+    slides.push(premiumListings.slice(i, i + chunkSize));
+  }
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
-      <h2 className="mb-8 text-4xl font-['Bebas_Neue'] text-black font-bold">
-        {text}
-      </h2>
+      <div className="container">
+        <h2 className="mb-8 text-4xl font-['Bebas_Neue'] text-black font-bold">
+          {text}
+        </h2>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {premiumListings.map((item) => (
-          <Link to={`${item.href}`}>
-            <Card key={item.id} className="shadow relative overflow-hidden">
-              <img
-                src={item.image}
-                alt="thumbnail"
-                className="absolute top-5 left-3 h-12 w-16 object-cover border-4 border-white shadow"
-              />
+        <div
+          id="listingCarousel"
+          className="carousel slide relative"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
 
-              {/* Heart icon (right) */}
-              <Button className="absolute top-3 right-3 h-8 w-8 rounded-full  backdrop-blur-md border bg-transparent border-white p-0 flex items-center justify-center  transition">
-                <Heart className="h-5 w-5 font-bold fill-white text-white" />
-              </Button>
-              <img
-                src={item.image}
-                alt={item.title}
-                className="h-48 w-full object-cover"
-              />
-              <CardHeader className="space-y-1">
-                <h6 className="w-fit font-sm font-semibold text-gray-600">
-                  {item.category}
-                </h6>
-                <h3 className="text-lg text-black font-bold  font-['Bebas_Neue']">
-                  {item.title}
-                </h3>
-                <p className="text-sm truncate text-gray-600">
-                  {item.subtitle}
-                </p>
-              </CardHeader>
-              <CardContent>
-                <span className="">
-                  {/* Stars */}
-                  <div className="flex">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star
-                        key={star}
-                        className={`w-5 h-5 text-[#E6B65C] ${
-                          star <= Math.round(item.rating)
-                            ? "fill-[#E6B65C] text-[#E6B65C]"
-                            : "text-[#E6B65C]"
-                        }`}
-                      />
-                    ))}
-                  </div>
+            {slides.map((group, index) => (
+              <div
+                key={index}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+              >
+                <div className="grid gap-2  sm:grid-cols-2 lg:grid-cols-4">
 
-                  {/* Rating badge */}
-                  {/* <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-primary text-white">
-                    {item.rating}
-                  </span> */}
-                </span>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="p-0 border-0 bg-transparent text-[#22c35d] font-extrabold underline underline-offset-4 decoration-[#23c55e] hover:text-[#4bd87d] hover:decoration-[#4bd87d]"
-                >
-                  MENU
-                </Button>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
+                  {group.map((item) => (
+                    <Link key={item.id} to={`${item.href}`}>
+                      <Card className="border-none shadow-md relative overflow-hidden">
+
+                        <img
+                          src={item.image}
+                          alt="thumbnail"
+                          className="absolute top-5 left-3 h-12 w-16 object-cover border-4 border-white shadow"
+                        />
+
+                        <Button className="absolute top-3 right-3 h-8 w-8 rounded-full backdrop-blur-md border bg-transparent border-white p-0 flex items-center justify-center">
+                          <Heart className="h-5 w-5 fill-white text-white" />
+                        </Button>
+
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="h-48 w-full object-cover"
+                        />
+
+                        <CardContent className="p-2">
+                          <h6 className="w-fit font-sm font-bold text-gray-600">
+                            {item.category}
+                          </h6>
+
+                          <h3 className="text-lg text-black font-bold font-luxury">
+                            {item.title}
+                          </h3>
+
+                          <p className="text-xs font-bold truncate text-gray-600">
+                            {item.subtitle}
+                          </p>
+
+                          <div className="flex mt-3">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <Star
+                                key={star}
+                                className={`w-5 h-5 ${
+                                  star <= Math.round(item.rating)
+                                    ? "fill-[#E6B65C] text-[#E6B65C]"
+                                    : "text-[#E6B65C]"
+                                }`}
+                              />
+                            ))}
+                          </div>
+
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="p-0 border-0 bg-transparent text-[#22c35d] font-extrabold underline underline-offset-4 decoration-[#23c55e] hover:text-[#4bd87d]"
+                          >
+                            MENU
+                          </Button>
+                        </CardContent>
+
+                      </Card>
+                    </Link>
+                  ))}
+
+                </div>
+              </div>
+            ))}
+
+          </div>
+
+          {/* Left Button */}
+          <button
+            type="button"
+            data-bs-target="#listingCarousel"
+            data-bs-slide="prev"
+            className="absolute top-1/2 -translate-y-1/2 -left-6 z-10
+                       w-10 h-10 flex items-center justify-center
+                       rounded-full bg-[#d0a439] text-white shadow-lg"
+          >
+            <ChevronLeft size={50} className="p-2"/>
+          </button>
+
+          {/* Right Button */}
+          <button
+            type="button"
+            data-bs-target="#listingCarousel"
+            data-bs-slide="next"
+            className="absolute top-1/2 -translate-y-1/2 -right-6 z-10
+                       w-10 h-10 flex items-center justify-center
+                       rounded-full bg-[#d0a439] text-white shadow-lg"
+          >
+          <ChevronRight size={50} className="p-2"/>
+
+          </button>
+
+        </div>
       </div>
     </section>
   );
