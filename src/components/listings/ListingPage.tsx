@@ -42,10 +42,10 @@ export default function ListingPage({ categories = [] }) {
         />
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 g-0">
           {currentItems.map((cat) => (
             <Link key={cat.id} to={`${cat.href}`}>
-              <Card className="border-0 bg-transparent shadow-none">
+              <Card className="border-0 bg-transparent  shadow-none">
                 <CardHeader>
                   <img
                     src={cat.image}
