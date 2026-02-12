@@ -1,4 +1,10 @@
 import "../src/Custom-Css/Homepage.css";
+
+// import Signup from "@/pages/Signup";
+// import Login from "@/pages/Login";
+// import Dashboard from "@/pages/dashboard";
+// import ProtectedRoute from "@/components/auth/ProtectedRoute";
+
 import HomePage from "@/pages/HomePage";
 import Activities from "@/pages/Activities";
 import Hotels from "@/pages/Hotels";
@@ -32,6 +38,19 @@ function App() {
       <Sonner />
       <BrowserRouter>
         <Routes>
+
+           {/* <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        /> */}
+
           <Route
             path="/"
             element={
