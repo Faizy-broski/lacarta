@@ -1,110 +1,64 @@
-// import { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
+// src/pages/Dashboard.jsx
+import { useAuth } from '../hooks/useAuth';
+import { Button } from '@/components/ui/button'; // Shadcn Button
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'; // Shadcn Card (install if needed: npx shadcn-ui@latest add card)
 
-// export default function Dashboard() {
-//   const navigate = useNavigate();
-//   const [user, setUser] = useState(null);
+export default function Dashboard() {
+  const { user, logout } = useAuth();
 
-//   useEffect(() => {
-//     const storedUser = localStorage.getItem("user");
-//     const token = localStorage.getItem("token");
+  const handleLogout = () => {
+    logout();
+    // No need for manual redirect; AuthContext will handle state, and ProtectedRoute will redirect to /login
+  };
 
-//     if (!token) {
-//       navigate("/login");
-//       return;
-//     }
+  if (!user) {
+    return <div>Loading...</div>; // Fallback if user data isn't loaded yet
+  }
 
-//     if (storedUser) {
-//       setUser(JSON.parse(storedUser));
-//     }
-//   }, [navigate]);
+  return (
+    <div className="min-h-screen bg-gray-100 p-4">
+      <div className="max-w-4xl mx-auto">
+        <Card className="mb-6">
+          <CardHeader>
+            <CardTitle className="text-2xl">Welcome to Your Dashboard</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600 mb-4">
+              Hello, {user.name}! You are logged in as a {user.role}.
+            </p>
+            <div className="space-y-2">
+              <p><strong>Name:</strong> {user.name}</p>
+              <p><strong>Email:</strong> {user.email}</p>
+              <p><strong>Role:</strong> {user.role}</p>
+              <p><strong>User ID:</strong> {user.id}</p>
+            </div>
+          </CardContent>
+        </Card>
 
-//   const handleLogout = () => {
-//     localStorage.removeItem("token");
-//     localStorage.removeItem("user");
-//     navigate("/login");
-//   };
+        {/* Placeholder for additional dashboard content */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Dashboard Features</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              This is a placeholder for your app's main content. Add features like user management, data tables, or charts here.
+            </p>
+            {/* Example: Add buttons or links to other pages */}
+            <div className="mt-4 space-x-2">
+              <Button variant="outline">View Profile</Button>
+              <Button variant="outline">Settings</Button>
+            </div>
+          </CardContent>
+        </Card>
 
-//   if (!user) return null;
-
-//   return (
-//     <div className="min-h-screen bg-gray-100 p-8">
-      
-//       {/* HEADER */}
-//       <div className="flex justify-between items-center mb-8">
-//         <h1 className="text-2xl font-bold">
-//           Welcome, {user.name}
-//         </h1>
-
-//         <button
-//           onClick={handleLogout}
-//           className="bg-black text-white px-4 py-2 rounded"
-//         >
-//           Logout
-//         </button>
-//       </div>
-
-//       {/* ROLE BASED UI */}
-//       {user.role === "admin" ? (
-//         <div className="space-y-6">
-//           <h2 className="text-xl font-semibold text-red-600">
-//             Admin Dashboard
-//           </h2>
-
-//           <div className="grid grid-cols-3 gap-6">
-//             <div className="bg-white p-6 rounded shadow">
-//               <h3 className="font-bold">Total Users</h3>
-//               <p className="text-gray-500">Manage all users</p>
-//             </div>
-
-//             <div className="bg-white p-6 rounded shadow">
-//               <h3 className="font-bold">Manage Owners</h3>
-//               <p className="text-gray-500">Approve or remove owners</p>
-//             </div>
-
-//             <div className="bg-white p-6 rounded shadow">
-//               <h3 className="font-bold">System Settings</h3>
-//               <p className="text-gray-500">Control platform settings</p>
-//             </div>
-//           </div>
-//         </div>
-//       ) : user.role === "owner" ? (
-//         <div className="space-y-6">
-//           <h2 className="text-xl font-semibold text-blue-600">
-//             Owner Dashboard
-//           </h2>
-
-//           <div className="grid grid-cols-2 gap-6">
-//             <div className="bg-white p-6 rounded shadow">
-//               <h3 className="font-bold">My Properties</h3>
-//               <p className="text-gray-500">Manage your listings</p>
-//             </div>
-
-//             <div className="bg-white p-6 rounded shadow">
-//               <h3 className="font-bold">Bookings</h3>
-//               <p className="text-gray-500">View customer bookings</p>
-//             </div>
-//           </div>
-//         </div>
-//       ) : (
-//         <div className="space-y-6">
-//           <h2 className="text-xl font-semibold text-green-600">
-//             User Dashboard
-//           </h2>
-
-//           <div className="grid grid-cols-2 gap-6">
-//             <div className="bg-white p-6 rounded shadow">
-//               <h3 className="font-bold">Browse Listings</h3>
-//               <p className="text-gray-500">Explore available properties</p>
-//             </div>
-
-//             <div className="bg-white p-6 rounded shadow">
-//               <h3 className="font-bold">My Bookings</h3>
-//               <p className="text-gray-500">View your reservations</p>
-//             </div>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
+        {/* Logout Button */}
+        <div className="mt-6 text-center">
+          <Button onClick={handleLogout} variant="destructive">
+            Logout
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,9 +1,12 @@
 import "../src/Custom-Css/Homepage.css";
 
-// import Signup from "@/pages/Signup";
-// import Login from "@/pages/Login";
-// import Dashboard from "@/pages/dashboard";
-// import ProtectedRoute from "@/components/auth/ProtectedRoute";
+// import Auth from "@/components/auth/LoginSignup.tsx"
+import LoginPage from '@/pages/LoginPage';
+import SignupPage from '@/pages/SignupPage';
+import { AuthProvider } from '@/contexts/AuthContext'; 
+import ProtectedRoute from '@/components/ProtectedRoute'
+import Dashboard from '@/pages/Dashboard';
+
 
 import HomePage from "@/pages/HomePage";
 import Activities from "@/pages/Activities";
@@ -31,25 +34,29 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+
 function App() {
   return (
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <AuthProvider>
         <Routes>
 
-           {/* <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
 
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        /> */}
+          {/* <Route
+            path="/SignupLogin"
+            element={
+              <Layout>
+                <Auth />
+              </Layout>
+            }
+          /> */}
+
 
           <Route
             path="/"
@@ -182,6 +189,7 @@ function App() {
             }
           />
         </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   );
