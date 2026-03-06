@@ -16,8 +16,8 @@ import DetailedBoating from "@/pages/Detailed-Boating";
 import DetailedGastronomy from "@/pages/Detailed-Gyst";
 
 import RealestatePage from "@/pages/Real-Estate-Page";
-import NotFound from "@/pages/NotFound"
-import RealestateListing from "@/pages/real-estate-listing";
+import NotFound from "@/pages/NotFound";
+import RealestateListing from "@/pages/Detailed-realEstate";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -80,15 +80,15 @@ function App() {
               </Layout>
             }
           />
-          <Route
+          {/* <Route
             path="/realState"
             element={
               <Layout>
                 <RealEstate />
               </Layout>
             }
-          />
-        <Route
+          /> */}
+          <Route
             path="/elite"
             element={
               <Layout>
@@ -97,14 +97,14 @@ function App() {
             }
           />
           <Route
-            path="/real-Estate-detailed"
+            path="/realState"
             element={
               <Layout>
                 <RealestatePage />
               </Layout>
             }
           />
-           <Route
+          <Route
             path="/real-Estate-listing"
             element={
               <Layout>
@@ -113,7 +113,6 @@ function App() {
             }
           />
 
-          
           <Route
             path="/Detailed-Boating"
             element={

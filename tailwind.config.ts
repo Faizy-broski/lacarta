@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
-import animate from "tailwindcss-animate"
+import animate from "tailwindcss-animate";
+import lineClamp from "@tailwindcss/line-clamp";
 
 export default {
   darkMode: ["class"],
@@ -21,18 +22,21 @@ export default {
     extend: {
       fontFamily: {
         // This makes Times New Roman the default serif font
-        luxury: ['Cinzel', 'serif'],
-         sans: ['Inter', 'sans-serif'],
-        serif: ['"Times New Roman"','Inter', 'Moonscape','Times', 'serif'],
+        moonscape: ["Moonscape", "serif"],
+        antigua: ["antigua", "serif"],
+        luxury: ["Cinzel", "serif"],
+        sans: ["Inter", "sans-serif"],
+        serif: ['"Times New Roman"', "Inter", "Moonscape", "Times", "serif"],
       },
       colors: {
         greenStart: "#3BCF8E",
         greenMid: "#2EB872",
         greenEnd: "#1E9E5A",
         placeholderColor: {
-          light: "#e9e9e9",y : "#d0a235",
+          light: "#e9e9e9",
+          y: "#d0a235",
           text: "#33333",
-          r:"#af0501"
+          r: "#af0501",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -77,12 +81,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Parish custom colors
-        "peach-gold": "hsl(var(--peach-gold))",
-        "sage-green": "hsl(var(--sage-green))",
-        "dark-surface": "hsl(var(--dark-surface))",
-        "dark-surface-alt": "hsl(var(--dark-surface-alt))",
-        "mystery-purple": "hsl(var(--mystery-purple))",
+        // Lacarta custom colors
+        gold: "hsl(var(--gold))",
+        "gold-light": "hsl(var(--gold-light))",
+        green: "hsl(var(--green))",
+        "green-light": "hsl(var(--green-light))",
+        red: "hsl(var(--red))",
+        "red-light": "hsl(var(--red-light))",
+        // "peach-gold": "hsl(var(--peach-gold))",
+        // "sage-green": "hsl(var(--sage-green))",
+        // "dark-surface": "hsl(var(--dark-surface))",
+        // "dark-surface-alt": "hsl(var(--dark-surface-alt))",
+        // "mystery-purple": "hsl(var(--mystery-purple))",
       },
       backgroundImage: {},
       boxShadow: {
@@ -123,5 +133,5 @@ export default {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, lineClamp],
 } satisfies Config;
